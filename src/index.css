@@ -51,11 +51,30 @@
   margin: 0px 0px 30px 30px;
 }
 .answer p{
-
+  text-shadow: 0px 2px 2px rgb(0, 0, 0, .8);
   font-family: 'Russo One', sans-serif; 
   color: rgb(144, 232, 238);
   margin: 0px 0px 0px 30px;
   
+}
 
+#submit {
+  color: rgb(171, 141, 228);
+  height: 200px;
+  width: 200px;
+  margin: 0px 0px 60px 0px;
+  /* border: 1px solid rgb(91, 236, 255); */
+  border: 1px solid rgb(255, 239, 242);
+  font-family: 'Oxygen', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  box-shadow: inset 2px 2px 20px 0px lavenderblush, inset -2px -2px 20px 0px pink;
+  transition: all .4s;
+}
+#submit:hover {
+  background-color: white;
   
 }
+
