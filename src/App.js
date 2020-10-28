@@ -15,9 +15,13 @@ function App() {
     }
     shuffle(quizz)
 
+    const [pointsState, setPointsState] = useState(0);
 
-    function submit(){
-      
+
+    function submit(correctAnswer, chosenAnswer){
+      if (correctAnswer === chosenAnswer){
+        setPointsState(pointsState + 1)
+      }
     }
     
    
