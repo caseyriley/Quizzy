@@ -69,7 +69,7 @@ function App() {
           <h3 onClick={submit}>SUBMIT</h3>
         </div>
       </div>
-      <div className={`${scoreModalState === true ? "main__score-modal-open" : "main__score-modal-close"}`} onClick={reload}>
+      <div className={`${scoreModalState === true ? "main__score-modal-open" : "main__score-modal-close"}`} onClick={reload} >
         <div id={"main__score-modal-open__point-c"}>
           <h1 id={"main__score-modal-open__point-c__title"}>YOUR SCORE</h1>
           <h1 id={"main__score-modal-open__point-c__points"}>{totallState}</h1>

@@ -91,6 +91,8 @@
 }
 .main__score-modal-close {
   opacity: 0;
+  width: 0px;
+  height: 0px;
 }
 #main__score-modal-open__point-c{
   width: 70%;
