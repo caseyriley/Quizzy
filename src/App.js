@@ -50,6 +50,10 @@ function App() {
   function reload() {
     window.location.reload();
   }
+
+  function closeScorModal(){
+    setScoreModalState(false);
+  }
  
   return (
     <>
@@ -65,14 +69,60 @@ function App() {
         <Question question={quizz[7].question} answers={answersArray7} correct={quizz[7].correct} pointsState={pointsState} setPointsState={setPointsState} qId={7}/>
         <Question question={quizz[8].question} answers={answersArray8} correct={quizz[8].correct} pointsState={pointsState} setPointsState={setPointsState} qId={8}/>
         <Question question={quizz[9].question} answers={answersArray9} correct={quizz[9].correct} pointsState={pointsState} setPointsState={setPointsState} qId={9}/>
-        <div id={"main__submit"}> 
-          <h3 onClick={submit}>SUBMIT</h3>
+        <div id={"main__submit"} onClick={submit}> 
+          <h3 >SUBMIT</h3>
         </div>
       </div>
-      <div className={`${scoreModalState === true ? "main__score-modal-open" : "main__score-modal-close"}`} onClick={reload} >
+      <div className={`${scoreModalState === true ? "main__score-modal-open" : "main__score-modal-close"}`} onClick={closeScorModal} >
         <div id={"main__score-modal-open__point-c"}>
           <h1 id={"main__score-modal-open__point-c__title"}>YOUR SCORE</h1>
           <h1 id={"main__score-modal-open__point-c__points"}>{totallState}</h1>
+          <div className={"main__score-modal-open__answers"}>  
+            <div id={"answers-title"}>
+              <h2 id={"answers-title__h2"}>correct answers below</h2>
+            </div>
+            <div className={"modal-answer"}>
+              <p className={"modal-answer__p1"}>{quizz[0].question}</p>
+              <p className={"modal-answer__p2"}>{quizz[0].correct}</p>
+            </div>
+            <div className={"modal-answer"}>
+              <p className={"modal-answer__p1"}>{quizz[1].question}</p>
+              <p className={"modal-answer__p2"}>{quizz[1].correct}</p>
+            </div>
+            <div className={"modal-answer"}>
+              <p className={"modal-answer__p1"}>{quizz[2].question}</p>
+              <p className={"modal-answer__p2"}>{quizz[2].correct}</p>
+            </div>
+            <div className={"modal-answer"}>
+              <p className={"modal-answer__p1"}>{quizz[3].question}</p>
+              <p className={"modal-answer__p2"}>{quizz[3].correct}</p>
+            </div>
+            <div className={"modal-answer"}>
+              <p className={"modal-answer__p1"}>{quizz[4].question}</p>
+              <p className={"modal-answer__p2"}>{quizz[4].correct}</p>
+            </div>
+            <div className={"modal-answer"}>
+              <p className={"modal-answer__p1"}>{quizz[5].question}</p>
+              <p className={"modal-answer__p2"}>{quizz[5].correct}</p>
+            </div>
+            <div className={"modal-answer"}>
+              <p className={"modal-answer__p1"}>{quizz[6].question}</p>
+              <p className={"modal-answer__p2"}>{quizz[6].correct}</p>
+            </div>
+            <div className={"modal-answer"}>
+              <p className={"modal-answer__p1"}>{quizz[7].question}</p>
+              <p className={"modal-answer__p2"}>{quizz[7].correct}</p>
+            </div>
+            <div className={"modal-answer"}>
+              <p className={"modal-answer__p1"}>{quizz[8].question}</p>
+              <p className={"modal-answer__p2"}>{quizz[8].correct}</p>
+            </div>
+            <div className={"modal-answer"}>
+              <p className={"modal-answer__p1"}>{quizz[9].question}</p>
+              <p className={"modal-answer__p2"}>{quizz[9].correct}</p>
+            </div>
+            <p></p>
+          </div>
         </div>
       </div>
     </>
