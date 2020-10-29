@@ -59,6 +59,11 @@ function App() {
     <>
       <div id={"main"}>
         <h1 id={'main__title'}>QUIZZY</h1>
+        <div id={"instructions"}>
+          <p>Answer 10 multiple choice questions and click the submit button to see your score.</p>
+          <p>The correct answers will be displayed only after submitting your answers.</p>
+          <p>The questions provided are random so each time you play the questions will be different.</p>
+        </div>
         <Question question={quizz[0].question} answers={answersArray0} correct={quizz[0].correct} pointsState={pointsState} setPointsState={setPointsState} qId={0}/>
         <Question question={quizz[1].question} answers={answersArray1} correct={quizz[1].correct} pointsState={pointsState} setPointsState={setPointsState} qId={1}/>
         <Question question={quizz[2].question} answers={answersArray2} correct={quizz[2].correct} pointsState={pointsState} setPointsState={setPointsState} qId={2}/>
@@ -73,7 +78,7 @@ function App() {
           <h3 >SUBMIT</h3>
         </div>
       </div>
-      <div className={`${scoreModalState === true ? "main__score-modal-open" : "main__score-modal-close"}`} onClick={closeScorModal} >
+      <div className={`${scoreModalState === true ? "main__score-modal-open" : "main__score-modal-close"}`} onClick={reload} >
         <div id={"main__score-modal-open__point-c"}>
           <h1 id={"main__score-modal-open__point-c__title"}>YOUR SCORE</h1>
           <h1 id={"main__score-modal-open__point-c__points"}>{totallState}</h1>
