@@ -1,4 +1,4 @@
-INSERT INTO questions (qna)
+INSERT INTO Questions (qna)
 VALUES
 ('{"question":"What is the official name for the \"hashtag\" symbol?","incorrect":["Number sign","Hash Sign","Pound"],"correct":"Octothorpe"}' ),
 ('{"question":"The dreaded CORS error does not apply too?","incorrect":["Allows a server to relax the same-origin policy","Redirects","Form submissions"],"correct":"Restricted access to data"}' ),
@@ -19,5 +19,6 @@ VALUES
 ('{"question":"What statement terminates a loop in JS?":["End","Stop","Continue"],"correct":"Break"}' ),  
 ('{"question":"Binary Search is what time complexity?":["Polynomial","Linear","Loglinear"],"correct":"Logarithmic"}' ),  
 ('{"question":".splice() does what in JS?":["Combines 2 strings","Combines 2 arrays","Changes the contents of an string by removing or replacing existing elements and/or adding new elements"],"correct":"Changes the contents of an array by removing or replacing existing elements and/or adding new elements"}' ),                    
-('{"question":"In Agile Software Development which value is true?","incorrect":["Comprehensive documentation is more important then fully working software","Tools and processes are more important then feelings","Sticking to a plan is very important"],"correct":"Individuals and interactions are more important then processes and tools"}' )
+('{"question":"In Agile Software Development which value is true?","incorrect":["Comprehensive documentation is more important then fully working software","Tools and processes are more important then feelings","Sticking to a plan is very important"],"correct":"Individuals and interactions are more important then processes and tools"}' ),
+('{"question":"ORM stands for?","incorrect":["Object-reliace mapping","Object-reliace method","Object-replication method"],"correct":"Object-relational mapping"}' )
 ;

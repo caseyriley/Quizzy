@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import quizz from './Apprentice_TandemFor400_Data.json';
 import Question from './Question';
 
@@ -32,7 +32,23 @@ shuffle(answersArray8)
 let answersArray9 =  [quizz[9].incorrect[0], quizz[9].incorrect[1], quizz[9].incorrect[2], quizz[9].correct];
 shuffle(answersArray9)
 
-function App() {
+const App = () => {
+
+  useEffect(()=>{
+    const getQna = async () => {
+      let response = await fetch('http://localhost:8080/questions', {
+        method: "GET",
+        mode: "cors"
+      })
+      if (!response.ok){
+        console.log("response !ok")
+      } else {
+        const json = await response.json()
+        console.log(json)
+      }
+    }
+    getQna();
+  },[]);
 
   const [pointsState, setPointsState] = useState({"q0":0, "q1":0, "q2":0, "q3":0, "q4":0, "q5":0, "q6":0, "q7":0, "q8":0, "q9":0});
   const [totallState, setTotallState] = useState(0);
