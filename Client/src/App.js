@@ -54,11 +54,25 @@ function App() {
   function closeScorModal(){
     setScoreModalState(false);
   }
+
+  const hitBackend = async () => {
+    let response = await fetch('http://localhost:8080/test', {
+      method: "GET",
+      mode: "cors"
+    })
+    if (!response.ok){
+      console.log("response !ok")
+    } else {
+      const json = await response.json()
+      console.log(json.data)
+    }
+  }
  
   return (
     <>
       <div id={"main"}>
-        <h1 id={'main__title'}>QUIZZY</h1>
+      <button onClick={hitBackend}>Send request</button>
+        <h1 id={'main__title'}>QUIZ SAUCE</h1>
         <div id={"instructions"}>
           <p>Answer 10 multiple choice questions and click the submit button to see your score.</p>
           <p>The correct answers will be displayed only after submitting your answers.</p>
