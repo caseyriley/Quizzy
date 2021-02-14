@@ -166,21 +166,6 @@ const App = () => {
           <p>The questions provided are random so each time you play the questions will be different.</p>
         </div>
         {qst}
-        {/* {quizzState &&  questionsState ?
-        <>
-        <Question question={quizzState[0]["qna"].question} answers={questionsState["a0"]} correct={quizzState[0] && quizzState[0]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={0}/>
-        <Question question={quizzState[1]["qna"].question} answers={questionsState["a1"]} correct={quizzState[1] && quizzState[1]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={1}/>
-        <Question question={quizzState[2]["qna"].question} answers={questionsState["a2"]} correct={quizzState[2] && quizzState[2]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={2}/>
-        <Question question={quizzState[3]["qna"].question} answers={questionsState["a3"]} correct={quizzState[3] && quizzState[3]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={3}/>
-        <Question question={quizzState[4]["qna"].question} answers={questionsState["a4"]} correct={quizzState[4] && quizzState[4]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={4}/>
-        <Question question={quizzState[5]["qna"].question} answers={questionsState["a5"]} correct={quizzState[5] && quizzState[5]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={5}/>
-        <Question question={quizzState[6]["qna"].question} answers={questionsState["a6"]} correct={quizzState[6] && quizzState[6]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={6}/>
-        <Question question={quizzState[7]["qna"].question} answers={questionsState["a7"]} correct={quizzState[7] && quizzState[7]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={7}/>
-        <Question question={quizzState[8]["qna"].question} answers={questionsState["a8"]} correct={quizzState[8] && quizzState[8]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={8}/>
-        <Question question={quizzState[9]["qna"].question} answers={questionsState["a9"]} correct={quizzState[9] && quizzState[9]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={9}/>
-        </>
-        : null
-        } */}
         <div id={"main__submit"} onClick={submit}> 
           <h3 >SUBMIT</h3>
         </div>
