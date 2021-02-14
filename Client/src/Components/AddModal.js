@@ -6,7 +6,8 @@ const AddModal = (props) => {
   const correct = useRef();
   const false1 = useRef();
   const false2 = useRef();
-  const false3 = useRef();
+  const false3 = useRef(); 
+  
   function submit(e){
     e.preventDefault();
     const sub = {"question": question.current.value, "incorrect": [false1.current.value, false2.current.value, false3.current.value], "correct": correct.current.value};
