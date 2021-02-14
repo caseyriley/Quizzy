@@ -12,7 +12,7 @@ const router = express.Router();
 const app = express();
 
 app.use(cors(), express.json())
-app.use(express.static(path.join(__dirname, 'static')));
+app.use(express.static(path.join(__dirname, 'Client/build')));
 
 app.post('/questions', async(req, res) => {
   if (req.method == 'POST'){
