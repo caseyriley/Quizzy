@@ -35,17 +35,24 @@ function shuffle(array) {
 
 const App = () => {
 
-  const answersArray0 = useRef()
-  const answersArray1 = useRef()
-  const answersArray2 = useRef()
-  const answersArray3 = useRef()
-  const answersArray4 = useRef()
-  const answersArray5 = useRef()
-  const answersArray6 = useRef()
-  const answersArray7 = useRef()
-  const answersArray8 = useRef()
-  const answersArray9 = useRef()
+  // const answersArray0 = useRef()
+  // const answersArray1 = useRef()
+  // const answersArray2 = useRef()
+  // const answersArray3 = useRef()
+  // const answersArray4 = useRef()
+  // const answersArray5 = useRef()
+  // const answersArray6 = useRef()
+  // const answersArray7 = useRef()
+  // const answersArray8 = useRef()
+  // const answersArray9 = useRef()
   const [quizzState, setQuizzState] = useState();
+  const [questionsState, setQuestionsState] = useState({});
+
+  function updateQuestions(key, value){
+    let obj = questionsState;
+    obj[key] = value;
+    setQuestionsState(obj)
+  }
 
   useEffect(()=>{
     let quizz = [];
@@ -56,38 +63,57 @@ const App = () => {
     })
     .then(res => res.json())
     .then(json => {
-      // console.log(JSON.parse(json[0]["qna"]))
-      // console.log("JJJJJJJJJJJJJ",JSON.parse(json[0]))
-      // quizz = JSON.parse(json);
-      // setTimeout(() => {
-      //   shuffle(quizz);
-      //   setQuizzState(quizz)
-      // }, 500);
+      
+      // quizz = json;
+      json.forEach((el, i) => {
+        let prev = JSON.parse(el["qna"]);
+        json[i]["qna"] = prev;
+      });
+      console.log("JJJJJJJJJJJJJ", json[0]["qna"])
+      return json;
     })
-    // .then(() => {
-    //   answersArray0.current =  [quizz[0]["qna"].incorrect[0], quizz[0]["qna"].incorrect[1], quizz[0]["qna"].incorrect[2], quizz[0]["qna"].correct];
-    //   shuffle(answersArray0.current)
-    //   answersArray1.current =  [quizz[1].incorrect[0], quizz[1].incorrect[1], quizz[1].incorrect[2], quizz[1].correct];
-    //   shuffle(answersArray1.current)
-    //   answersArray2.current =  [quizz[2].incorrect[0], quizz[2].incorrect[1], quizz[2].incorrect[2], quizz[2].correct];
-    //   shuffle(answersArray2.current)
-    //   answersArray3.current =  [quizz[3].incorrect[0], quizz[3].incorrect[1], quizz[3].incorrect[2], quizz[3].correct];
-    //   shuffle(answersArray3.current)
-    //   answersArray4.current =  [quizz[4].incorrect[0], quizz[4].incorrect[1], quizz[4].incorrect[2], quizz[4].correct];
-    //   shuffle(answersArray4.current)
-    //   answersArray5.current =  [quizz[5].incorrect[0], quizz[5].incorrect[1], quizz[5].incorrect[2], quizz[5].correct];
-    //   shuffle(answersArray5.current)
-    //   answersArray6.current =  [quizz[6].incorrect[0], quizz[6].incorrect[1], quizz[6].incorrect[2], quizz[6].correct];
-    //   shuffle(answersArray6.current)
-    //   answersArray7.current =  [quizz[7].incorrect[0], quizz[7].incorrect[1], quizz[7].incorrect[2], quizz[7].correct];
-    //   shuffle(answersArray7.current)
-    //   answersArray8.current =  [quizz[8].incorrect[0], quizz[8].incorrect[1], quizz[8].incorrect[2], quizz[8].correct];
-    //   shuffle(answersArray8.current)
-    //   answersArray9.current =  [quizz[9].incorrect[0], quizz[9].incorrect[1], quizz[9].incorrect[2], quizz[9].correct];
-    //   shuffle(answersArray9.current)
-    // })
+    .then(json => {
+
+        quizz = json
+        console.log("quizz===>",quizz)
+        shuffle(quizz);
+        setQuizzState(quizz)
+
+    })
+    .then(() => {
+      let answersArray0 =  [quizz[0]["qna"].incorrect[0], quizz[0]["qna"].incorrect[1], quizz[0]["qna"].incorrect[2], quizz[0]["qna"].correct];
+      shuffle(answersArray0)
+      updateQuestions("a0", answersArray0)
+      let answersArray1 =  [quizz[1]["qna"].incorrect[0], quizz[1]["qna"].incorrect[1], quizz[1]["qna"].incorrect[2], quizz[1]["qna"].correct];
+      shuffle(answersArray1)
+      updateQuestions("a1", answersArray1)
+      let answersArray2 =  [quizz[2]["qna"].incorrect[0], quizz[2]["qna"].incorrect[1], quizz[2]["qna"].incorrect[2], quizz[2]["qna"].correct];
+      shuffle(answersArray2)
+      updateQuestions("a2", answersArray2)
+      let answersArray3 =  [quizz[3]["qna"].incorrect[0], quizz[3]["qna"].incorrect[1], quizz[3]["qna"].incorrect[2], quizz[3]["qna"].correct];
+      shuffle(answersArray3)
+      updateQuestions("a3", answersArray3)
+      let answersArray4 =  [quizz[4]["qna"].incorrect[0], quizz[4]["qna"].incorrect[1], quizz[4]["qna"].incorrect[2], quizz[4]["qna"].correct];
+      shuffle(answersArray4)
+      updateQuestions("a4", answersArray4)
+      let answersArray5 =  [quizz[5]["qna"].incorrect[0], quizz[5]["qna"].incorrect[1], quizz[5]["qna"].incorrect[2], quizz[5]["qna"].correct];
+      shuffle(answersArray5)
+      updateQuestions("a5", answersArray5)
+      let answersArray6 =  [quizz[6]["qna"].incorrect[0], quizz[6]["qna"].incorrect[1], quizz[6]["qna"].incorrect[2], quizz[6]["qna"].correct];
+      shuffle(answersArray6)
+      updateQuestions("a6", answersArray6)
+      let answersArray7 =  [quizz[7]["qna"].incorrect[0], quizz[7]["qna"].incorrect[1], quizz[7]["qna"].incorrect[2], quizz[7]["qna"].correct];
+      shuffle(answersArray7)
+      updateQuestions("a7", answersArray7)
+      let answersArray8 =  [quizz[8]["qna"].incorrect[0], quizz[8]["qna"].incorrect[1], quizz[8]["qna"].incorrect[2], quizz[8]["qna"].correct];
+      shuffle(answersArray8)
+      updateQuestions("a8", answersArray8)
+      let answersArray9 =  [quizz[9]["qna"].incorrect[0], quizz[9]["qna"].incorrect[1], quizz[9]["qna"].incorrect[2], quizz[9]["qna"].correct];
+      shuffle(answersArray9)
+      updateQuestions("a9", answersArray9)
+    })
     .catch(err => {
-      // console.log(err)
+      console.log(err)
     })
       
 
@@ -111,23 +137,6 @@ const App = () => {
   function reload() {
     window.location.reload();
   }
-
-  function closeScorModal(){
-    setScoreModalState(false);
-  }
-
-  const hitBackend = async () => {
-    let response = await fetch('http://localhost:8080/test', {
-      method: "GET",
-      mode: "cors"
-    })
-    if (!response.ok){
-      console.log("response !ok")
-    } else {
-      const json = await response.json()
-      console.log(json.data)
-    }
-  }
  
   return (
     <>
@@ -139,18 +148,18 @@ const App = () => {
           <p>The correct answers will be displayed only after submitting your answers.</p>
           <p>The questions provided are random so each time you play the questions will be different.</p>
         </div>
-        {quizzState ?
+        {quizzState && questionsState ?
         <>
-        <Question question={quizzState[0].question} answers={answersArray0.current} correct={quizzState[0] && quizzState[0].correct} pointsState={pointsState} setPointsState={setPointsState} qId={0}/>
-        <Question question={quizzState[1].question} answers={answersArray1.current} correct={quizzState[1] && quizzState[1].correct} pointsState={pointsState} setPointsState={setPointsState} qId={1}/>
-        <Question question={quizzState[2].question} answers={answersArray2.current} correct={quizzState[2] && quizzState[2].correct} pointsState={pointsState} setPointsState={setPointsState} qId={2}/>
-        <Question question={quizzState[3].question} answers={answersArray3.current} correct={quizzState[3] && quizzState[3].correct} pointsState={pointsState} setPointsState={setPointsState} qId={3}/>
-        <Question question={quizzState[4].question} answers={answersArray4.current} correct={quizzState[4] && quizzState[4].correct} pointsState={pointsState} setPointsState={setPointsState} qId={4}/>
-        <Question question={quizzState[5].question} answers={answersArray5.current} correct={quizzState[5] && quizzState[5].correct} pointsState={pointsState} setPointsState={setPointsState} qId={5}/>
-        <Question question={quizzState[6].question} answers={answersArray6.current} correct={quizzState[6] && quizzState[6].correct} pointsState={pointsState} setPointsState={setPointsState} qId={6}/>
-        <Question question={quizzState[7].question} answers={answersArray7.current} correct={quizzState[7] && quizzState[7].correct} pointsState={pointsState} setPointsState={setPointsState} qId={7}/>
-        <Question question={quizzState[8].question} answers={answersArray8.current} correct={quizzState[8] && quizzState[8].correct} pointsState={pointsState} setPointsState={setPointsState} qId={8}/>
-        <Question question={quizzState[9].question} answers={answersArray9.current} correct={quizzState[9] && quizzState[9].correct} pointsState={pointsState} setPointsState={setPointsState} qId={9}/>
+        <Question question={quizzState[0]["qna"].question} answers={questionsState["a0"]} correct={quizzState[0] && quizzState[0]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={0}/>
+        <Question question={quizzState[1]["qna"].question} answers={questionsState["a1"]} correct={quizzState[1] && quizzState[1]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={1}/>
+        <Question question={quizzState[2]["qna"].question} answers={questionsState["a2"]} correct={quizzState[2] && quizzState[2]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={2}/>
+        <Question question={quizzState[3]["qna"].question} answers={questionsState["a3"]} correct={quizzState[3] && quizzState[3]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={3}/>
+        <Question question={quizzState[4]["qna"].question} answers={questionsState["a4"]} correct={quizzState[4] && quizzState[4]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={4}/>
+        <Question question={quizzState[5]["qna"].question} answers={questionsState["a5"]} correct={quizzState[5] && quizzState[5]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={5}/>
+        <Question question={quizzState[6]["qna"].question} answers={questionsState["a6"]} correct={quizzState[6] && quizzState[6]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={6}/>
+        <Question question={quizzState[7]["qna"].question} answers={questionsState["a7"]} correct={quizzState[7] && quizzState[7]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={7}/>
+        <Question question={quizzState[8]["qna"].question} answers={questionsState["a8"]} correct={quizzState[8] && quizzState[8]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={8}/>
+        <Question question={quizzState[9]["qna"].question} answers={questionsState["a9"]} correct={quizzState[9] && quizzState[9]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={9}/>
         </>
         : null
         }

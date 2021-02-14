@@ -21,9 +21,11 @@ const AddModal = (props) => {
       })
       .then(res => {
         console.log("posted a quizz question")
+        props.toggleAddModalState()
       })
       .catch(err => {
         console.log(err)
+        props.toggleAddModalState()
       })
     }
     inner()
