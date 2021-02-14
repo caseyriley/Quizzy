@@ -1,22 +1,25 @@
 const express = require('express');
+const qs = require('querystring');
 const {Question, sequelize} = require('./models')
 
 const cors = require('cors')
 const path = require('path');
+const { request } = require('http');
 
 const app = express();
 
 app.use(cors(), express.json())
 
 app.post('/questions', async(req, res) => {
-  const {qna} = req.body
-
-  try{
-    const qna = await Question.create({qna})
-    return res.json(qna)
-  } catch(err){
-    console.log(err)
-    return res.status(500).json(err)
+  if (req.method == 'POST'){
+    let post = JSON.stringify(req.body)
+    try {
+      const qna = await Question.create({ "qna": post });
+      res.send(JSON.stringify(qna));
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    };
   }
 })
 
@@ -24,7 +27,7 @@ app.get('/questions', async(req, res) => {
   try {
     const questions = await Question.findAll()
 
-    return res.json(questions)
+    res.send(JSON.stringify(questions))
   } catch(err){
     console.log(err)
     return res.status(500).json({error: 'Something went wrong'})

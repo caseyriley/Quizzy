@@ -65,19 +65,19 @@ const Question = (props) => {
       
       <div className={"question__answer"}>
         <input className={"question__answer__input"} type="checkbox" name="check" onChange={check0} checked={checkState ? checkState[0] : false}/>
-        <p>{props.answers[0]}</p>
+        <p>{props.answers && props.answers[0]}</p>
       </div>
       <div className={"question__answer"}>
         <input className={"question__answer__input"} type="checkbox" name="check" onChange={check1} checked={checkState ? checkState[1] : false}/>
-        <p>{props.answers[1]}</p>
+        <p>{props.answers && props.answers[1]}</p>
       </div>
       <div className={"question__answer"}>
         <input className={"question__answer__input"} type="checkbox" name="check" onChange={check2} checked={checkState ? checkState[2] : false}/> 
-        <p>{props.answers[2]}</p>
+        <p>{props.answers && props.answers[2]}</p>
       </div>
       <div className={"question__answer"}>
         <input className={"question__answer__input"} type="checkbox" name="check" onChange={check3} checked={checkState ? checkState[3] : false}/>
-        <p>{props.answers[3]}</p>
+        <p>{props.answers && props.answers[3]}</p>
       </div>
     </div>
   )

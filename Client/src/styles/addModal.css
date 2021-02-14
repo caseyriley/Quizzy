@@ -1,0 +1,105 @@
+.add-modal-background {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(202, 228, 247);
+
+}
+.add-modal-c {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: thistle;
+  overflow-y: scroll;
+  border-radius: 20px;
+}
+.add-modal-close {
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  right: 20px;
+  border-radius: 5px;
+}
+.add-modal-close:hover {
+  background-color: rgb(202, 228, 247);
+  border: 1px solid rgb(206, 119, 206);
+}
+.add-modal-close :nth-child(1){
+  transform: rotate(45deg);
+  border: 1px solid grey;
+  width: 15px;
+  position: absolute;
+}
+.add-modal-close :nth-child(2){
+  transform: rotate(-45deg);
+  border: 1px solid grey;
+  width: 15px;
+  position: absolute;
+}
+.add-modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 80%;
+  margin: 500px 0px 50px 0px;
+}
+.add-modal-form label {
+  text-align: center;
+  font-family: 'Ultra', serif; 
+  color: plum;
+  text-shadow: 0px 3px 6px black, 2px 3px 0px cyan;
+  font-size: 25px;
+  width: 80%;
+
+}
+textarea {
+  width: 80%;
+  height: 100px;
+  margin: 20px 0px 0px 0px;
+}
+.add-modal-form label textarea {
+  /* min-width: 100% !important; */
+  resize: none;
+  outline: none;
+  border-radius: 4px;
+
+}
+.add-modal-form label  textarea:invalid {
+  border: 2px dashed red;
+}
+  
+.add-modal-form label  textarea:valid {
+  border: 2px solid rgb(1, 205, 18);
+}
+.add-modal-form button {
+  width: 150px;
+  height: 50px;
+  font-family: 'Ultra', serif; 
+  color: plum;
+  text-shadow: 0px 1px 3px black;
+  font-size: 25px;
+  background-color: powderblue;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, .3),
+  inset 0px -3px 6px 0px rgb(0, 0, 0, .3);
+  outline: none;
+  margin: 15px 0px 0px 0px;
+
+}

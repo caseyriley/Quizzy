@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './styles/navbar.css';
+import './styles/addModal.css';
 import './mScreen750.css';
 import App from './App';
 
