@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useMemo} from 'react';
 import Navbar from './Components/Navbar';
+import { API_URL } from './config';
 // import quizz from './Apprentice_TandemFor400_Data.json';
 import Question from './Question';
 
@@ -57,7 +58,7 @@ const App = () => {
     }
     let quizz = [];
     const getQna = async () => {
-      fetch('http://localhost:8080/questions', {
+      fetch(`${API_URL}/questions`, {
         method: "GET",
         mode: "cors"
       })
