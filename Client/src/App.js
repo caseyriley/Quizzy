@@ -2,7 +2,7 @@ import React, {useState, useEffect, useMemo} from 'react';
 import Navbar from './Components/Navbar';
 import { API_URL } from './config';
 // import quizz from './Apprentice_TandemFor400_Data.json';
-import Question from './Question';
+import Question from './Components/Question';
 
 
 function shuffle(array) {
@@ -11,45 +11,11 @@ function shuffle(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
-// shuffle(quizz)
-
-// let answersArray0 =  [quizz[0].incorrect[0], quizz[0].incorrect[1], quizz[0].incorrect[2], quizz[0].correct];
-// shuffle(answersArray0)
-// let answersArray1 =  [quizz[1].incorrect[0], quizz[1].incorrect[1], quizz[1].incorrect[2], quizz[1].correct];
-// shuffle(answersArray1)
-// let answersArray2 =  [quizz[2].incorrect[0], quizz[2].incorrect[1], quizz[2].incorrect[2], quizz[2].correct];
-// shuffle(answersArray2)
-// let answersArray3 =  [quizz[3].incorrect[0], quizz[3].incorrect[1], quizz[3].incorrect[2], quizz[3].correct];
-// shuffle(answersArray3)
-// let answersArray4 =  [quizz[4].incorrect[0], quizz[4].incorrect[1], quizz[4].incorrect[2], quizz[4].correct];
-// shuffle(answersArray4)
-// let answersArray5 =  [quizz[5].incorrect[0], quizz[5].incorrect[1], quizz[5].incorrect[2], quizz[5].correct];
-// shuffle(answersArray5)
-// let answersArray6 =  [quizz[6].incorrect[0], quizz[6].incorrect[1], quizz[6].incorrect[2], quizz[6].correct];
-// shuffle(answersArray6)
-// let answersArray7 =  [quizz[7].incorrect[0], quizz[7].incorrect[1], quizz[7].incorrect[2], quizz[7].correct];
-// shuffle(answersArray7)
-// let answersArray8 =  [quizz[8].incorrect[0], quizz[8].incorrect[1], quizz[8].incorrect[2], quizz[8].correct];
-// shuffle(answersArray8)
-// let answersArray9 =  [quizz[9].incorrect[0], quizz[9].incorrect[1], quizz[9].incorrect[2], quizz[9].correct];
-// shuffle(answersArray9)
 
 const App = () => {
 
-  // const answersArray0 = useRef()
-  // const answersArray1 = useRef()
-  // const answersArray2 = useRef()
-  // const answersArray3 = useRef()
-  // const answersArray4 = useRef()
-  // const answersArray5 = useRef()
-  // const answersArray6 = useRef()
-  // const answersArray7 = useRef()
-  // const answersArray8 = useRef()
-  // const answersArray9 = useRef()
   const [quizzState, setQuizzState] = useState();
   const [questionsState, setQuestionsState] = useState({});
-
-
 
   useEffect(()=>{
     let obj = {};
@@ -65,7 +31,6 @@ const App = () => {
       .then(res => res.json())
       .then(json => {
         
-        // quizz = json;
         json.forEach((el, i) => {
           let prev = JSON.parse(el["qna"]);
           json[i]["qna"] = prev;
@@ -121,7 +86,6 @@ const App = () => {
     getQna();
   },[]);
 
-//{"question":".splice() does what in JS?","incorrect":["Combines 2 strings","Combines 2 arrays","Changes the contents of an string by removing or replacing existing elements and/or adding new elements"],"correct":"Changes the contents of an array by removing or replacing existing elements and/or adding new elements"}
   const [pointsState, setPointsState] = useState({"q0":0, "q1":0, "q2":0, "q3":0, "q4":0, "q5":0, "q6":0, "q7":0, "q8":0, "q9":0});
   const [totallState, setTotallState] = useState(0);
   const [scoreModalState, setScoreModalState] = useState(false);

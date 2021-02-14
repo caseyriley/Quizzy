@@ -1,4 +1,5 @@
 import React, {useRef} from 'react';
+import { API_URL } from './../config';
 
 const AddModal = (props) => {
   const question = useRef();
@@ -11,7 +12,7 @@ const AddModal = (props) => {
     const sub = {"question": question.current.value, "incorrect": [false1.current.value, false2.current.value, false3.current.value], "correct": correct.current.value};
     console.log("sub", sub)
     async function inner(){
-      fetch('http://localhost:8080/questions', {
+      fetch(`${API_URL}/questions`, {
         method: "POST",
         mode: "cors",
         body: JSON.stringify(sub),
