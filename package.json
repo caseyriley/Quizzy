@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node index.js"
+    "server": "node index.js",
+    "start": "node index.js && cd Client react-scripts start",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -25,5 +27,8 @@
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.5.0",
     "sequelize-cli": "^6.2.0"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
