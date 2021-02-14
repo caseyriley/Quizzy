@@ -24,7 +24,7 @@ const App = () => {
     }
     let quizz = [];
     const getQna = async () => {
-      fetch(`${API_URL}/questions`, {
+      fetch(`${API_URL}questions`, {
         method: "GET",
         mode: "cors"
       })
