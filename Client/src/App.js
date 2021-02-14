@@ -159,6 +159,7 @@ const App = () => {
     <>
       <div id={"main"}>
         <Navbar/>
+        <div className={"undernav"}></div>
         <h1 id={'main__title'}>QUIZ SAUCE</h1>
         <div id={"instructions"}>
           <p>Answer 10 multiple choice questions and click the submit button to see your score.</p>
