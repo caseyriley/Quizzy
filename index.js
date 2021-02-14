@@ -2,13 +2,17 @@ const express = require('express');
 const qs = require('querystring');
 const {Question, sequelize} = require('./models')
 
+
 const cors = require('cors')
 const path = require('path');
 const { request } = require('http');
 
+const router = express.Router();
+
 const app = express();
 
 app.use(cors(), express.json())
+app.use(express.static('Client/src'))
 
 app.post('/questions', async(req, res) => {
   if (req.method == 'POST'){
@@ -46,7 +50,8 @@ app.get('/test', (req, res) => {
 
 app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify({data:"hit /"}))
+  // res.send(JSON.stringify({data:"hit /"}))
+  res.render('index.js')
 })
 
 const port = process.env.PORT || 8080;
