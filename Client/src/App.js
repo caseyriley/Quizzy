@@ -180,44 +180,44 @@ const App = () => {
               <h2 id={"answers-title__h2"}>correct answers below</h2>
             </div>
             <div className={"modal-answer"}>
-              <p className={"modal-answer__p1"}>{quizzState[0] ? quizzState[0].question : ""}</p>
-              <p className={"modal-answer__p2"}>{quizzState[0] ? quizzState[0].correct : ""}</p>
+              <p className={"modal-answer__p1"}>{quizzState[0]["qna"] ? quizzState[0]["qna"].question : ""}</p>
+              <p className={"modal-answer__p2"}>{quizzState[0]["qna"] ? quizzState[0]["qna"].correct : ""}</p>
             </div>
             <div className={"modal-answer"}>
-              <p className={"modal-answer__p1"}>{quizzState[1].question}</p>
-              <p className={"modal-answer__p2"}>{quizzState[1].correct}</p>
+              <p className={"modal-answer__p1"}>{quizzState[1]["qna"].question}</p>
+              <p className={"modal-answer__p2"}>{quizzState[1]["qna"].correct}</p>
             </div>
             <div className={"modal-answer"}>
-              <p className={"modal-answer__p1"}>{quizzState[2].question}</p>
-              <p className={"modal-answer__p2"}>{quizzState[2].correct}</p>
+              <p className={"modal-answer__p1"}>{quizzState[2]["qna"].question}</p>
+              <p className={"modal-answer__p2"}>{quizzState[2]["qna"].correct}</p>
             </div>
             <div className={"modal-answer"}>
-              <p className={"modal-answer__p1"}>{quizzState[3].question}</p>
-              <p className={"modal-answer__p2"}>{quizzState[3].correct}</p>
+              <p className={"modal-answer__p1"}>{quizzState[3]["qna"].question}</p>
+              <p className={"modal-answer__p2"}>{quizzState[3]["qna"].correct}</p>
             </div>
             <div className={"modal-answer"}>
-              <p className={"modal-answer__p1"}>{quizzState[4].question}</p>
-              <p className={"modal-answer__p2"}>{quizzState[4].correct}</p>
+              <p className={"modal-answer__p1"}>{quizzState[4]["qna"].question}</p>
+              <p className={"modal-answer__p2"}>{quizzState[4]["qna"].correct}</p>
             </div>
             <div className={"modal-answer"}>
-              <p className={"modal-answer__p1"}>{quizzState[5].question}</p>
-              <p className={"modal-answer__p2"}>{quizzState[5].correct}</p>
+              <p className={"modal-answer__p1"}>{quizzState[5]["qna"].question}</p>
+              <p className={"modal-answer__p2"}>{quizzState[5]["qna"].correct}</p>
             </div>
             <div className={"modal-answer"}>
-              <p className={"modal-answer__p1"}>{quizzState[6].question}</p>
-              <p className={"modal-answer__p2"}>{quizzState[6].correct}</p>
+              <p className={"modal-answer__p1"}>{quizzState[6]["qna"].question}</p>
+              <p className={"modal-answer__p2"}>{quizzState[6]["qna"].correct}</p>
             </div>
             <div className={"modal-answer"}>
-              <p className={"modal-answer__p1"}>{quizzState[7].question}</p>
-              <p className={"modal-answer__p2"}>{quizzState[7].correct}</p>
+              <p className={"modal-answer__p1"}>{quizzState[7]["qna"].question}</p>
+              <p className={"modal-answer__p2"}>{quizzState[7]["qna"].correct}</p>
             </div>
             <div className={"modal-answer"}>
-              <p className={"modal-answer__p1"}>{quizzState[8].question}</p>
-              <p className={"modal-answer__p2"}>{quizzState[8].correct}</p>
+              <p className={"modal-answer__p1"}>{quizzState[8]["qna"].question}</p>
+              <p className={"modal-answer__p2"}>{quizzState[8]["qna"].correct}</p>
             </div>
             <div className={"modal-answer"}>
-              <p className={"modal-answer__p1"}>{quizzState[9].question}</p>
-              <p className={"modal-answer__p2"}>{quizzState[9].correct}</p>
+              <p className={"modal-answer__p1"}>{quizzState[9]["qna"].question}</p>
+              <p className={"modal-answer__p2"}>{quizzState[9]["qna"].correct}</p>
             </div>
             <p></p>
           </div>
