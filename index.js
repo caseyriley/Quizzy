@@ -12,7 +12,7 @@ const router = express.Router();
 const app = express();
 
 app.use(cors(), express.json())
-app.use(express.static('Client/src'))
+app.use(express.static(path.join(__dirname, 'static')));
 
 app.post('/questions', async(req, res) => {
   if (req.method == 'POST'){
@@ -51,7 +51,7 @@ app.get('/test', (req, res) => {
 app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   // res.send(JSON.stringify({data:"hit /"}))
-  res.render('index.js')
+  res.render('index.html')
 })
 
 const port = process.env.PORT || 8080;
