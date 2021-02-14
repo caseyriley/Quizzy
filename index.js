@@ -51,7 +51,8 @@ app.get('/test', (req, res) => {
 app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   // res.send(JSON.stringify({data:"hit /"}))
-  res.render('index.html')
+  res.sendFile(path.join(__dirname+'/Client/build/index.html'));
+  // res.render('index.html')
 })
 
 const port = process.env.PORT || 8080;
