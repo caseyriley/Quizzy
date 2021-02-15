@@ -11,11 +11,11 @@ module.exports = {
       qna: {
         type: Sequelize.STRING
       },
-      createdAt: {
+      createdat: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      updatedAt: {
+      updatedat: {
         allowNull: false,
         type: Sequelize.DATE
       },

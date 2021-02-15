@@ -40,7 +40,6 @@ app.get('/questions', async(req, res) => {
 
 })
 
-
 app.get('/test', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify({data: {
