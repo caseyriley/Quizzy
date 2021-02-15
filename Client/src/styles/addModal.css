@@ -107,3 +107,6 @@ textarea {
 .add-modal-form button:hover {
   background-color: purple;
 }
+.add-err {
+  border: 2px dashed red;
+}

@@ -10,27 +10,36 @@ const AddModal = (props) => {
   
   function submit(e){
     e.preventDefault();
-    const sub = {"question": question.current.value, "incorrect": [false1.current.value, false2.current.value, false3.current.value], "correct": correct.current.value};
-    console.log("sub", sub)
-    async function inner(){
-      fetch(`${API_URL}/questions`, {
-        method: "POST",
-        mode: "cors",
-        body: JSON.stringify(sub),
-        headers: {
-          'Content-Type': 'application/json'
-        },
-      })
-      .then(res => {
-        console.log("posted a quizz question")
-        props.toggleAddModalState()
-      })
-      .catch(err => {
-        console.log(err)
-        props.toggleAddModalState()
-      })
-    }
-    inner()
+    // if (question.current.value === undefined && correct.current.current.value === undefined && false1.current.value === undefined && false2.current.value === undefined && false3.current.value === undefined){
+      console.log("in if")
+      const sub = {"question": question.current.value, "incorrect": [false1.current.value, false2.current.value, false3.current.value], "correct": correct.current.value};
+      console.log("sub", sub)
+      async function inner(){
+        fetch(`${API_URL}/questions`, {
+          method: "POST",
+          mode: "cors",
+          body: JSON.stringify(sub),
+          headers: {
+            'Content-Type': 'application/json'
+          },
+        })
+        .then(res => {
+          console.log("posted a quizz question")
+          props.toggleAddModalState()
+        })
+        .catch(err => {
+          console.log(err)
+          props.toggleAddModalState()
+        })
+      }
+      inner()
+    // } else {
+    //   console.log("in else")
+    //   if (correct.current){
+    //     correct.current.classList.add("add-err");
+    //   }
+    // }
+    
   }
   return(
     <>
