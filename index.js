@@ -14,6 +14,7 @@ const app = express();
 app.use(cors(), express.json())
 app.use(express.static(path.join(__dirname, 'Client/build')));
 
+
 app.post('/questions', async(req, res) => {
   if (req.method == 'POST'){
     let post = JSON.stringify(req.body)
