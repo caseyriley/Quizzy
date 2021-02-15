@@ -125,7 +125,7 @@ const App = () => {
       <div id={"main"}>
         <Navbar/>
         <div className={"undernav"}></div>
-        <h1 id={'main__title'}>QUIZ SAUCE</h1>
+        <h1 id={'main__title'}>CODE SAUCE</h1>
         <div id={"instructions"}>
           <p>Answer 10 multiple choice questions and click the submit button to see your score.</p>
           <p>The correct answers will be displayed only after submitting your answers.</p>
