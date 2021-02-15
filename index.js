@@ -1,7 +1,7 @@
 const express = require('express');
 const qs = require('querystring');
 const {Question, sequelize} = require('./models')
-
+const env = process.env.NODE_ENV || 'development';
 
 const cors = require('cors')
 const path = require('path');

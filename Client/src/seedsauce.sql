@@ -1,3 +1,10 @@
+CREATE TABLE Questions (
+  id serial PRIMARY KEY,
+  qna VARCHAR(1000) UNIQUE NOT NULL,
+  createdAt TIMESTAMP,
+  updatedAt TIMESTAMP
+);
+
 INSERT INTO Questions (qna)
 VALUES
 ("{\"question\":\"What is the official name for the \"hashtag\" symbol?\",\"incorrect\":[\"Number sign\",\"Hash Sign\",\"Pound\"],\"correct\":\"Octothorpe\"}"),
