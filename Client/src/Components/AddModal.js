@@ -10,7 +10,8 @@ const AddModal = (props) => {
   
   function submit(e){
     e.preventDefault();
-    // if (question.current.value === undefined && correct.current.current.value === undefined && false1.current.value === undefined && false2.current.value === undefined && false3.current.value === undefined){
+    // console.log("question.current.value",question.current.value);
+    if (question.current.value !== "" && correct.current.value !== "" && false1.current.value !== "" && false2.current.value !== "" && false3.current.value !== ""){
       console.log("in if")
       const sub = {"question": question.current.value, "incorrect": [false1.current.value, false2.current.value, false3.current.value], "correct": correct.current.value};
       console.log("sub", sub)
@@ -33,12 +34,12 @@ const AddModal = (props) => {
         })
       }
       inner()
-    // } else {
-    //   console.log("in else")
-    //   if (correct.current){
-    //     correct.current.classList.add("add-err");
-    //   }
-    // }
+    } else {
+      console.log("in else")
+      if (correct.current.value === ""){
+        correct.current.classList.add("add-err");
+      }
+    }
     
   }
   return(

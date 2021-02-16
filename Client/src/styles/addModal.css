@@ -108,5 +108,6 @@ textarea {
   background-color: purple;
 }
 .add-err {
-  border: 2px dashed red;
+  border: 2px dashed red !important;
+ 
 }
