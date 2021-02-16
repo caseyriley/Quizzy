@@ -34,14 +34,30 @@ const AddModal = (props) => {
         })
       }
       inner()
-    } else {
+    } else 
       console.log("in else")
+
+      const textareas = document.getElementsByTagName("textarea");
+      for (let i = 0; i < textareas.length; i ++){
+        textareas[i].classList.remove("add-err")
+      }
+
+      if (question.current.value === ""){
+        question.current.classList.add("add-err");
+      }
       if (correct.current.value === ""){
         correct.current.classList.add("add-err");
       }
+      if (false1.current.value === ""){
+        false1.current.classList.add("add-err");
+      }
+      if (false2.current.value === ""){
+        false2.current.classList.add("add-err");
+      }
+      if (false3.current.value === ""){
+        false3.current.classList.add("add-err");
+      }
     }
-    
-  }
   return(
     <>
     <div className={"add-modal-background"}></div>
@@ -56,8 +72,8 @@ const AddModal = (props) => {
           <textarea 
           ref={question}
           placeholder={"Add your quizz question here"}
-          minlength={5} 
-          maxlength={250}
+          minLength={5} 
+          maxLength={250}
           ></textarea>
         </label>
         <label>
@@ -65,8 +81,8 @@ const AddModal = (props) => {
           <textarea 
           ref={correct}
           placeholder={"Enter the correct answer to the quizz question here"}
-          minlength={1} 
-          maxlength={250}
+          minLength={1} 
+          maxLength={250}
           ></textarea>
         </label>
         <label>
@@ -74,7 +90,7 @@ const AddModal = (props) => {
           <textarea 
           ref={false1}
           placeholder={"Enter an incorrect answer to the quizz question here"}
-          minlength={1} 
+          minLength={1} 
           maxlength={250}
           ></textarea>
           </label>
@@ -83,8 +99,8 @@ const AddModal = (props) => {
           <textarea 
           ref={false2}
           placeholder={"Enter an incorrect answer to the quizz question here"}
-          minlength={1} 
-          maxlength={250}
+          minLength={1} 
+          maxLength={250}
           ></textarea>
           </label>
         <label>
@@ -93,7 +109,7 @@ const AddModal = (props) => {
           ref={false3}
           placeholder={"Enter an incorrect answer to the quizz question here"}
           minlength={1} 
-          maxlength={250}
+          maxLength={250}
           ></textarea>
         </label>
         <button onClick={submit}>Submit</button>
