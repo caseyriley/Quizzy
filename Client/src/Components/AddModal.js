@@ -36,6 +36,11 @@ const AddModal = (props) => {
       inner()
     } else 
       console.log("in else")
+      const instructionsC = document.getElementById("add-modal-instructions-c");
+      const instructions = document.getElementById("add-modal-instructions");
+      instructionsC.classList.add("instructions-err")
+      instructions.innerHTML = "Fill in the required fields below."
+      
 
       const textareas = document.getElementsByTagName("textarea");
       for (let i = 0; i < textareas.length; i ++){
@@ -66,7 +71,14 @@ const AddModal = (props) => {
         <div></div>
         <div></div>
       </div>
+
       <form className={"add-modal-form"}>
+        <div id={"add-modal-instructions-c"} className={"add-modal-instructions-c"}>
+          <p id={"add-modal-instructions"}>
+            Use the form below to leave a multiple choice coding question for the 
+            legacy of Code Sauce <span role="img" aria-label="smiling-cat">😸</span>
+          </p>
+        </div>
         <label>
           Question <br/>
           <textarea 
