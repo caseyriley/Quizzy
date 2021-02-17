@@ -1,4 +1,28 @@
 /* TODO Add site wide styles */
+body {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: black;
+}
+.fade-in{
+  animation: fade-in ease .6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #main {
   height: 100vh;
   width: 100vw;
@@ -27,7 +51,7 @@
   
 
 }
-#instructions {
+.q-instructions {
   min-width: 400px;
   max-width: 80%;
   height: auto;
@@ -39,7 +63,7 @@
   flex-direction: column;
   margin: 0px 0px 30px 0px;
 }
-#instructions p {
+.q-instructions p {
   color: rgb(241, 241, 241);
   color: rgb(69, 126, 201);
   
@@ -47,8 +71,12 @@
   margin: 0px 15px 15px 15px;
   text-align: center;
 }
-#instructions p:nth-child(1){
+.q-instructions p:nth-child(1){
   margin: 15px 15px 15px 15px;
+}
+.q-instructions-err {
+  border: 1px solid red;
+  background-color: white;
 }
 .question {
   display: flex;

@@ -34,7 +34,7 @@ const AddModal = (props) => {
         })
       }
       inner()
-    } else 
+    } else {
       console.log("in else")
       const instructionsC = document.getElementById("add-modal-instructions-c");
       const instructions = document.getElementById("add-modal-instructions");
@@ -62,7 +62,14 @@ const AddModal = (props) => {
       if (false3.current.value === ""){
         false3.current.classList.add("add-err");
       }
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+      
     }
+  }
   return(
     <>
     <div className={"add-modal-background"}></div>

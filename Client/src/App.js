@@ -17,6 +17,7 @@ const App = () => {
 
   const [quizzState, setQuizzState] = useState();
   const [questionsState, setQuestionsState] = useState({});
+  const [errorInstState, setErrorInstState] = useState(false);
 
   useEffect(()=>{
     let obj = {};
@@ -114,7 +115,20 @@ const App = () => {
 
       setTotallState(count);
       setScoreModalState(true);
-    } 
+    } else {
+
+      setErrorInstState(true)
+
+      function scrollToThis(){
+        setTimeout(() => {
+          const top = document.getElementById("undernav");
+          top.scrollIntoView({ behavior: 'smooth', alignToTop:false }) 
+        }, 500); 
+      }
+      scrollToThis()
+      
+      
+    }
 
   }
    
@@ -124,15 +138,20 @@ const App = () => {
  
   return (
     <>
-      <div id={"main"}>
+      <div id={"main"} className={"fade-in"}>
         <Navbar/>
-        <div className={"undernav"}></div>
+        <div id={"undernav"} className={"undernav"}></div>
         <h1 id={'main__title'}>CODE SAUCE</h1>
-        <div id={"instructions"}>
+        {errorInstState === false &&
+          <div className={"q-instructions"}>
           <p>Answer 10 multiple choice questions and click the submit button to see your score.</p>
           <p>The correct answers will be displayed only after submitting your answers.</p>
           <p>The questions provided are random so each time you play the questions will be different.</p>
-        </div>
+        </div>}
+        {errorInstState === true &&
+          <div className={"q-instructions q-instructions-err"}>
+          <p>Answer any unanswered questions before submitting your answers</p>
+        </div>}
 
         { quizzState && questionsState &&
           [...Array(10)].map((el , i)=>{
