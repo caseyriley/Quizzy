@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './styles/navbar.css';
 import './styles/addModal.css';
-import './mScreen750.css';
+import './styles/loginPage.css';
+import './styles/mScreen750.css';
 import App from './App';
+import LoginPage from './Components/LoginPage';
+let loggedIn = true;
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {loggedIn ? <App /> : <LoginPage/>}
   </React.StrictMode>,
   document.getElementById('root')
 );
