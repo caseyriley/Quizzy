@@ -65,8 +65,7 @@ const Question = (props) => {
       
       <label className={`question__answer checkbox-label checkbox-c`} >
         <input 
-          name={"check1"} 
-          // id={"check1"} 
+          name={"check0"} 
           type={"checkbox"} 
           required
           onChange={check0} checked={checkState ? checkState[0] : false}
@@ -75,19 +74,39 @@ const Question = (props) => {
         <span className="question__answer__text">{props.answers && props.answers[0]}</span>
       </label>
 
-      <div className={"question__answer"}>
-        <input className={"question__answer__input"} type="checkbox" name="check" onChange={check1} checked={checkState ? checkState[1] : false}/>
-        <p>{props.answers && props.answers[1]}</p>
-      </div>
+      <label className={`question__answer checkbox-label checkbox-c`} >
+        <input 
+          name={"check1"} 
+          type={"checkbox"} 
+          required
+          onChange={check1} checked={checkState ? checkState[1] : false}
+        />
+        <span className="checkmark"></span>
+        <span className="question__answer__text">{props.answers && props.answers[1]}</span>
+      </label>
 
-      <div className={"question__answer"}>
-        <input className={"question__answer__input"} type="checkbox" name="check" onChange={check2} checked={checkState ? checkState[2] : false}/> 
-        <p>{props.answers && props.answers[2]}</p>
-      </div>
-      <div className={"question__answer"}>
-        <input className={"question__answer__input"} type="checkbox" name="check" onChange={check3} checked={checkState ? checkState[3] : false}/>
-        <p>{props.answers && props.answers[3]}</p>
-      </div>
+      <label className={`question__answer checkbox-label checkbox-c`} >
+        <input 
+          name={"check2"} 
+          type={"checkbox"} 
+          required
+          onChange={check2} checked={checkState ? checkState[2] : false}
+        />
+        <span className="checkmark"></span>
+        <span className="question__answer__text">{props.answers && props.answers[2]}</span>
+      </label>
+
+      <label className={`question__answer checkbox-label checkbox-c`} >
+        <input 
+          name={"check3"} 
+          type={"checkbox"} 
+          required
+          onChange={check3} checked={checkState ? checkState[3] : false}
+        />
+        <span className="checkmark"></span>
+        <span className="question__answer__text">{props.answers && props.answers[3]}</span>
+      </label>
+
     </div>
   )
 }
