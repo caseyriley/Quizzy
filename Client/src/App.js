@@ -68,10 +68,16 @@ const App = () => {
   const [scoreModalState, setScoreModalState] = useState(false);
 
   function submit(){
+
     let allChecked = true;
+
     for (let i = 0; i < 10; i ++){
+
       let multChecked = false
+      let container = document.getElementById(`c${i}`);
       let checkboxes = document.getElementById(`c${i}`).getElementsByTagName('input');
+
+      container.classList.remove('container-err');
 
       for (let j = 0; j < checkboxes.length; j ++){
         let checkB = checkboxes[j]
@@ -80,25 +86,35 @@ const App = () => {
           multChecked = true;
         }
       }
+
       if (multChecked === false){
         allChecked = false;
+        container.classList.add("container-err");
       }
+
     }
+
     let checkboxes = document.getElementsByClassName('question__answer');
-    console.log("checkboxes", checkboxes)
+
     for (let i = 0; i < checkboxes.length; i ++){
+
       if (checkboxes[i].checked === false){
         allChecked = false;
       }
+
     }
+
     if (allChecked === true){
+
       let count = 0;
+
       for (const answer in pointsState){
         count += pointsState[answer];
       }
+
       setTotallState(count);
       setScoreModalState(true);
-    }
+    } 
 
   }
    

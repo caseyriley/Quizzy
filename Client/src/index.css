@@ -267,3 +267,7 @@
   padding: 5px;
 }
 
+.container-err {
+  border: 2px dashed red;
+}
+
