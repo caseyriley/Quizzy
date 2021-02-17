@@ -62,11 +62,13 @@ const AddModal = (props) => {
       if (false3.current.value === ""){
         false3.current.classList.add("add-err");
       }
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
+      function scrollToThis(){
+        setTimeout(() => {
+          const top = document.getElementById("add-modal-close");
+          top.scrollIntoView({ behavior: 'smooth', alignToTop:false }) 
+        }, 500); 
+      }
+      scrollToThis()
       
     }
   }
@@ -74,7 +76,7 @@ const AddModal = (props) => {
     <>
     <div className={"add-modal-background"}></div>
     <div className={"add-modal-c"}>
-      <div className={"add-modal-close"} onClick={props.toggleAddModalState}>
+      <div id={"add-modal-close"} className={"add-modal-close"} onClick={props.toggleAddModalState}>
         <div></div>
         <div></div>
       </div>
