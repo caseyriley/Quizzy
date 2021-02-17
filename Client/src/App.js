@@ -1,7 +1,6 @@
-import React, {useState, useEffect, useMemo} from 'react';
+import React, {useState, useEffect} from 'react';
 import Navbar from './Components/Navbar';
 import { API_URL } from './config';
-// import quizz from './Apprentice_TandemFor400_Data.json';
 import Question from './Components/Question';
 
 
