@@ -60,10 +60,10 @@ const Question = (props) => {
 
 
   return (
-    <div className={"question"}>
+    <div className={"question"} id={`c${props.ky}`} >
       <h2 >{props.question}</h2>
       
-      <label className={`question__answer checkbox-label checkbox-c`} >
+      <label className={`question__answer checkbox-label`} >
         <input 
           name={"check0"} 
           type={"checkbox"} 
@@ -74,7 +74,7 @@ const Question = (props) => {
         <span className="question__answer__text">{props.answers && props.answers[0]}</span>
       </label>
 
-      <label className={`question__answer checkbox-label checkbox-c`} >
+      <label className={`question__answer checkbox-label`} >
         <input 
           name={"check1"} 
           type={"checkbox"} 
@@ -85,7 +85,7 @@ const Question = (props) => {
         <span className="question__answer__text">{props.answers && props.answers[1]}</span>
       </label>
 
-      <label className={`question__answer checkbox-label checkbox-c`} >
+      <label className={`question__answer checkbox-label`} >
         <input 
           name={"check2"} 
           type={"checkbox"} 
@@ -96,7 +96,7 @@ const Question = (props) => {
         <span className="question__answer__text">{props.answers && props.answers[2]}</span>
       </label>
 
-      <label className={`question__answer checkbox-label checkbox-c`} >
+      <label className={`question__answer checkbox-label`} >
         <input 
           name={"check3"} 
           type={"checkbox"} 

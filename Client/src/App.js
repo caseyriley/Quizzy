@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import Navbar from './Components/Navbar';
 import { API_URL } from './config';
 import Question from './Components/Question';
+import ScoreModal from './Components/ScoreModal';
+
 
 
 function shuffle(array) {
@@ -66,12 +68,38 @@ const App = () => {
   const [scoreModalState, setScoreModalState] = useState(false);
 
   function submit(){
-    let count = 0;
-    for (const answer in pointsState){
-      count = count + pointsState[answer];
+    let allChecked = true;
+    for (let i = 0; i < 10; i ++){
+      let multChecked = false
+      let checkboxes = document.getElementById(`c${i}`).getElementsByTagName('input');
+
+      for (let j = 0; j < checkboxes.length; j ++){
+        let checkB = checkboxes[j]
+        console.log("checkB", checkB)
+        if (checkB.checked === true){
+          multChecked = true;
+        }
+      }
+      if (multChecked === false){
+        allChecked = false;
+      }
     }
-    setTotallState(count);
-    setScoreModalState(true);
+    let checkboxes = document.getElementsByClassName('question__answer');
+    console.log("checkboxes", checkboxes)
+    for (let i = 0; i < checkboxes.length; i ++){
+      if (checkboxes[i].checked === false){
+        allChecked = false;
+      }
+    }
+    if (allChecked === true){
+      let count = 0;
+      for (const answer in pointsState){
+        count += pointsState[answer];
+      }
+      setTotallState(count);
+      setScoreModalState(true);
+    }
+
   }
    
   function reload() {
@@ -93,7 +121,7 @@ const App = () => {
         { quizzState && questionsState &&
           [...Array(10)].map((el , i)=>{
             return(
-            <Question key={i} question={quizzState[i]["qna"].question} answers={questionsState[`a${i}`]} correct={quizzState[i] && quizzState[i]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={i}/>
+              <Question key={i} ky={i} question={quizzState[i]["qna"].question} answers={questionsState[`a${i}`]} correct={quizzState[i] && quizzState[i]["qna"].correct} pointsState={pointsState} setPointsState={setPointsState} qId={i}/>
             )
           })
         }
@@ -101,30 +129,10 @@ const App = () => {
         <div id={"main__submit"} onClick={submit}> 
           <h3 >SUBMIT</h3>
         </div>
+
       </div>
-      
-      <div className={`${scoreModalState === true ? "main__score-modal-open" : "main__score-modal-close"}`} onClick={reload} >
-        <div id={"main__score-modal-open__point-c"}>
-          <h1 id={"main__score-modal-open__point-c__title"}>YOUR SCORE</h1>
-          <h1 id={"main__score-modal-open__point-c__points"}>{totallState}</h1>
-          <div className={"main__score-modal-open__answers"}>  
-            <div id={"answers-title"}>
-              <h2 id={"answers-title__h2"}>correct answers below</h2>
-            </div>
-            {quizzState && 
-              [...Array(10)].map((el,i)=>{
-                return(
-                  <div key={i} className={"modal-answer"}>
-                    <p className={"modal-answer__p1"}>{quizzState[i]["qna"].question}</p>
-                    <p className={"modal-answer__p2"}>{quizzState[i]["qna"].correct}</p>
-                  </div>
-                )
-              })
-            }
-            <p></p>
-          </div>
-        </div>
-      </div>
+
+      <ScoreModal scoreModalState={scoreModalState} reload={reload} totallState={totallState} quizzState={quizzState} />
     </>
 
   );
