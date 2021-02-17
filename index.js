@@ -1,52 +1,23 @@
 const express = require('express');
-const qs = require('querystring');
-const {Question, sequelize} = require('./models')
+const questionRouter = require('./routes/questions.js')
+const {sequelize} = require('./models')
 const env = process.env.NODE_ENV || 'development';
 
 const cors = require('cors')
 const path = require('path');
 const { request } = require('http');
 
-const router = express.Router();
 
 const app = express();
 
 app.use(cors(), express.json())
 app.use(express.static(path.join(__dirname, 'Client/build')));
+app.use('/questions', questionRouter);
 
-
-app.post('/questions', async(req, res) => {
-  if (req.method == 'POST'){
-    let post = JSON.stringify(req.body)
-    try {
-      const qna = await Question.create({ "qna": post });
-      res.send(JSON.stringify(qna));
-    } catch (err) {
-      console.log(err);
-      return res.status(500).json(err);
-    };
-  }
-})
-
-app.get('/questions', async(req, res) => {
-  try {
-    const questions = await Question.findAll()
-
-    res.send(JSON.stringify(questions))
-  } catch(err){
-    console.log(err)
-    return res.status(500).json({error: 'Something went wrong'})
-  }
-
-})
 
 app.get('/test', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify({data: {
-    "question": "What is the official name for the 'hashtag' symbol?",
-    "incorrect": ["Number sign", "Hash Sign", "Pound"],
-    "correct": "Octothorpe"
-  }}))
+  res.send("Route to /test working")
 })
 
 
@@ -54,6 +25,9 @@ app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   res.sendFile(path.join(__dirname+'/Client/build/index.html'));
 })
+
+
+
 
 const port = process.env.PORT || 8080;
 
