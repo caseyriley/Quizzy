@@ -7,7 +7,6 @@ const cors = require('cors')
 const path = require('path');
 const { request } = require('http');
 
-
 const app = express();
 
 app.use(cors(), express.json())
