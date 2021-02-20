@@ -2,6 +2,7 @@ import React from 'react';
 
 const ScoreModal = (props) => {
   return (
+    
     <div className={`${props.scoreModalState === true ? "main__score-modal-open" : "main__score-modal-close"}`} onClick={props.reload} >
       <div id={"main__score-modal-open__point-c"}>
         <h1 id={"main__score-modal-open__point-c__title"}>YOUR SCORE</h1>
