@@ -30,8 +30,6 @@
 .login-button{
   width: 50%;
   height: 30px;
-  background-color: greenyellow;
-  background-color: rgb(240, 214, 240);
   background-color: rgb(205, 255, 232);
   display: flex;
   align-items: center;
@@ -59,7 +57,6 @@
 }
 .signup-form{
   width: 100%;
-  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,7 +67,6 @@
 }
 .login-form{
   width: 100%;
-  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,7 +77,6 @@
 }
 .login-form label{
   width: 100%;
-  color: rgb(149, 195, 255);
   color: rgb(69, 126, 201);
   font-family: 'Ultra', serif;  
   font-family: 'Oxygen', sans-serif;
@@ -94,7 +89,6 @@
   justify-content: center;
   align-items: center;
   margin: 20px 0px 0px 0px;
-  /* text-shadow: 2px 2px 2px rgb(0, 0, 0, .5); */
 }
 .login-form label input{
   width: 80%;
@@ -110,31 +104,75 @@
 .log-sign-login-button{
   width: 60%;
   height: 30px;
-  background-color: rgb(250, 188, 73);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 999px;
   box-shadow: 0px 3px 6px rgb(0, 0, 0, .3),
   inset 0px -3px 6px rgb(0, 0, 0, .2);
-  margin: 20px;
+  margin: 20px 0px 20px 0px;
   transition: all .3s;
   color: rgb(215, 144, 238);
   background-color: rgb(201, 108, 232);
   color: rgb(205, 255, 232);
 }
 .log-sign-login-button span{
-
-  font-family: 'Maven Pro', sans-serif;
-  /* font-family: 'Oxygen', sans-serif; */
-  /* font-family: 'Russo One', sans-serif;  */
   font-family: 'Ultra', serif;  
   text-shadow: 2px 2px 2px rgb(0, 0, 0, .5);
   transition: all .3s;
 }
 .log-sign-login-button:hover{
-  background-color: rgb(201, 108, 232);
-  /* color: rgb(144, 238, 210) !important; */
   background-color: rgb(250, 188, 73);
   color: rgb(215, 144, 238);
+}
+
+.log-sign-demo-button{
+  width: 60%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  box-shadow: 0px 3px 6px rgb(0, 0, 0, .3),
+  inset 0px -3px 6px rgb(0, 0, 0, .2);
+  margin: 00px 0px 20px 0px;
+  transition: all .3s;
+  background-color: rgb(201, 108, 232);
+  color: rgb(205, 255, 232);
+}
+.log-sign-demo-button span{
+  font-family: 'Ultra', serif;  
+  text-shadow: 2px 2px 2px rgb(0, 0, 0, .5);
+  transition: all .3s;
+}
+.log-sign-demo-button:hover{
+  background-color: rgb(250, 188, 73);
+  color: rgb(215, 144, 238);
+}
+
+/* /////////////Signup/Form/////////////////// */
+.signup-form label{
+  width: 100%;
+  color: rgb(69, 126, 201);
+  font-family: 'Oxygen', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 0px 0px;
+}
+.signup-form label input{
+  width: 80%;
+  height: 30px;
+  outline: none;
+  border: 2px solid rgb(161, 43, 211);
+  border-radius: 8px;
+  margin: 2px;
+}
+.signup-form label input:invalid{
+  border: 2px solid rgb(201, 108, 232);
 }

@@ -7,7 +7,7 @@ import './styles/loginPage.css';
 import './styles/mScreen750.css';
 import App from './App';
 import LoginPage from './Components/LoginPage';
-let loggedIn = false;
+let loggedIn = true;
 
 ReactDOM.render(
   <React.StrictMode>
