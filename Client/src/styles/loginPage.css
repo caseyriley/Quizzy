@@ -176,3 +176,7 @@
 .signup-form label input:invalid{
   border: 2px solid rgb(201, 108, 232);
 }
+
+.error {
+  border: 2px dashed red !important;
+}
