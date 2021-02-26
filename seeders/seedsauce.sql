@@ -5,6 +5,16 @@ CREATE TABLE Questions (
   updatedAt TIMESTAMP
 );
 
+CREATE TABLE users (
+  id serial PRIMARY KEY,
+  email VARCHAR(150) UNIQUE NOT NULL,
+  password VARCHAR(150) NOT NULL,
+  name VARCHAR(150) NOT NULL,
+  language VARCHAR(150),
+  createdAt TIMESTAMP,
+  updatedAt TIMESTAMP
+);
+
 INSERT INTO Questions (qna)
 VALUES
 ("{\"question\":\"What is the official name for the \"hashtag\" symbol?\",\"incorrect\":[\"Number sign\",\"Hash Sign\",\"Pound\"],\"correct\":\"Octothorpe\"}"),
