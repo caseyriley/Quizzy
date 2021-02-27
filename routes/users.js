@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const {User} = require('./../models')
-const bcrypt = require('bcryptjs')
+const {User} = require('./../models');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 router.post('/', async(req, res) => {
 
@@ -9,8 +10,8 @@ router.post('/', async(req, res) => {
   console.log("user POST", post)
   console.log("post.password======>", post["password"])
 
+  const password = await bcrypt.hashSync(post["password"], 10);
   const email = post["email"];
-  const password = bcrypt.hashSync(post["password"], 10);
   const name = post["name"];
   const language = post["language"];
 
