@@ -67,7 +67,7 @@ const SignupForm = (props)=>{
         ref={name}
         className={`${errorState.name === false ? 'error' : ''}`}
         required
-        placeholder={"Robert Smith"}
+        placeholder={"Casey"}
         minLength={3} 
         maxLength={150}
         />
