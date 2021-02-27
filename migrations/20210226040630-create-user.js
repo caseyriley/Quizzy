@@ -21,15 +21,15 @@ module.exports = {
         type: Sequelize.STRING(150),
         allowNull: false,
       },
-      best_language: {
+      language: {
         type: Sequelize.STRING(150)
       },
       createdAt: {
-        allowNull: true,
+        allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: true,
+        allowNull: false,
         type: Sequelize.DATE
       },
       tableName: 'users'

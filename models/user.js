@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(150),
       allowNull: false,
     },
-    best_language: DataTypes.STRING(150)
+    language: DataTypes.STRING(150)
   }, {
     sequelize,
     modelName: 'User',

@@ -1,5 +1,6 @@
 const express = require('express');
 const questionRouter = require('./routes/questions.js')
+const userRouter = require('./routes/users.js')
 const {sequelize} = require('./models')
 const env = process.env.NODE_ENV || 'development';
 
@@ -12,6 +13,7 @@ const app = express();
 app.use(cors(), express.json())
 app.use(express.static(path.join(__dirname, 'Client/build')));
 app.use('/questions', questionRouter);
+app.use('/users', userRouter);
 
 
 app.get('/test', (req, res) => {

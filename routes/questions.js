@@ -1,6 +1,6 @@
-const express = require('express')
-const router = express.Router()
-const {Question} = require('./../models')
+const express = require('express');
+const router = express.Router();
+const {Question} = require('./../models');
 
 router.get('/', async(req, res) => {
   try {
@@ -24,7 +24,5 @@ router.post('/', async(req, res) => {
     return res.status(500).json(err);
   };
 })
-
-
 
 module.exports = router;
