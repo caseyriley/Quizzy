@@ -12,9 +12,7 @@ const AddModal = (props) => {
     e.preventDefault();
     // console.log("question.current.value",question.current.value);
     if (question.current.value !== "" && correct.current.value !== "" && false1.current.value !== "" && false2.current.value !== "" && false3.current.value !== ""){
-      console.log("in if")
       const sub = {"question": question.current.value, "incorrect": [false1.current.value, false2.current.value, false3.current.value], "correct": correct.current.value};
-      console.log("sub", sub)
       async function inner(){
         fetch(`${API_URL}/questions`, {
           method: "POST",

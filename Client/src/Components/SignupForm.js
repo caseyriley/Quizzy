@@ -1,5 +1,7 @@
 import React, {useRef, useState} from 'react';
 
+const bcrypt = require('bcrypt');
+
 const SignupForm = (props)=>{
   const email = useRef();
   const password = useRef();
@@ -32,7 +34,15 @@ const SignupForm = (props)=>{
         prev.name = false;
       }
       if (prev.email && prev.password && prev.name){
-        console.log("submit*************")
+        const hash = bcrypt.hashSync('myPassword', 10);
+        let userObj = {email: prev.email, password: hash, name: prev.name, language: prev.language};
+
+        async function inner(){
+          fetch(`${API_URL}/users`, {
+            
+          })
+        }
+
       }
       setErrorState(prev);
   }
