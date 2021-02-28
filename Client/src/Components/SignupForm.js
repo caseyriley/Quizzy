@@ -45,6 +45,9 @@ const SignupForm = (props)=>{
               'Content-Type': 'application/json'
             },
           })
+          .then(res => {
+          
+          })
         }
         inner();
       }
