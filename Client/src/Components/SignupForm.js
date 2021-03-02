@@ -46,7 +46,8 @@ const SignupForm = (props)=>{
             },
           })
           .then(res => {
-          
+            console.log("ressssssssssss", res)
+            document.cookie = `token=${res}`;
           })
         }
         inner();
