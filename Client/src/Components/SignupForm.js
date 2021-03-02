@@ -46,9 +46,14 @@ const SignupForm = (props)=>{
             },
           })
           .then(res => {
-            console.log("ressssssssssss", res)
-            document.cookie = `token=${res}`;
+            if (res.ok){
+              document.cookie = `token=${res["accessToken"]}`;
+            } else {
+              console.log("failed to sign up new user")
+            }
+            
           })
+    
         }
         inner();
       }
