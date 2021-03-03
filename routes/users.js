@@ -14,23 +14,21 @@ router.post('/', async(req, res) => {
   const name = post["name"];
   const language = post["language"];
 
-  try {
-    let user = await User.create({"email": email, "password": password, "name": name, "language": language})
-    .then(res => {
-      console.log("wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww")
+
+  User.create({"email": email, "password": password, "name": name, "language": language})
+  .then(user => {
+    if (user){
+      console.log("this is in the if ################# ")
       const accessToken = jwt.sign(name, process.env.JWT_SECRET)
       console.log("accessToken=============================================>", accessToken)
-      return res.json({accessToken: accessToken, user: user})
-    })
-    .catch(err => {
-      console.log("NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN")
-      return res.status(409).json(err);
-    })
+      res.json({accessToken: accessToken, user: user})
+    }
+  })
+  .catch(err => {
+      console.log("this is in the catch %%%%%%%%%%%%%%%%% ")
+      res.status(409).json(err);
+  })
 
-
-  } catch (err) {
-    return res.status(500).json(err);
-  };
 })
 
 function authenticateToken(req, res, next) {
