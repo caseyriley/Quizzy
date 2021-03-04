@@ -24,6 +24,10 @@ router.post('/', async(req, res) => {
   }
 })
 
+router.get('/', async(req, res) => {
+  
+})
+
 function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization']
   const token = authHeader && authHeader.split(' ')[1]
