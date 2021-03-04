@@ -37,22 +37,22 @@ const SignupForm = (props)=>{
       if (prev.email && prev.password && prev.name){
         const user = {"email": email.current.value, "password": password.current.value, "name": name.current.value, "language": language.current.value};
         async function inner(){
-          fetch(`${API_URL}/users`, {
-            method: "POST",
-            mode: "cors",
-            body: JSON.stringify(user),
-            headers: {
-              'Content-Type': 'application/json'
-            },
-          })
-          .then(res => {
-            if (res.ok){
-              document.cookie = `token=${res["accessToken"]}`;
-            } else {
-              console.log("failed to sign up new user")
-            }
-            
-          })
+          try {
+            const response = await fetch(`${API_URL}/users`, {
+              method: "POST",
+              mode: "cors",
+              body: JSON.stringify(user),
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            })
+            const json = await response.json();
+            console.log("JSON",json)
+            document.cookie = json["token"];
+            document.location.reload();
+          } catch (error) {
+            console.log("Error in signup: ",error )
+          }
     
         }
         inner();
