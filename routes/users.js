@@ -16,6 +16,7 @@ router.post('/', async(req, res) => {
   const token = jwt.sign(name, process.env.JWT_SECRET)
   try {
     const user = await User.create({"email": email, "password": password, "name": name, "language": language})
+    // return res.cookie('token', token, { httpOnly: true });
     return res.json({token: token, user: user})
   } catch (err) {
     console.log(err)

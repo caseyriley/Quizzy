@@ -46,10 +46,15 @@ const SignupForm = (props)=>{
                 'Content-Type': 'application/json'
               }
             })
-            const json = await response.json();
-            console.log("JSON",json)
-            document.cookie = json["token"];
-            document.location.reload();
+            const json = await response.json()
+            if (json["token"]){
+              console.log("JSON",json)
+              document.cookie = json["token"];
+              document.location.reload();
+            } else {
+              console.log("Error in signup: 409")
+            }
+              
           } catch (error) {
             console.log("Error in signup: ",error )
           }
