@@ -10,14 +10,14 @@ import LoginPage from './Components/LoginPage';
 
 
 
-// let loggedIn = false;
+let loggedIn = false;
 
-// let cookies = document.cookie;
-// if (cookies){
-//   loggedIn = true;
-// }
+let cookies = document.cookie;
+if (cookies){
+  loggedIn = true;
+}
 
-let loggedIn = true;
+// let loggedIn = true;
 
 
 
@@ -27,3 +27,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
