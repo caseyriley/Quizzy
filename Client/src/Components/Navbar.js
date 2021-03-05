@@ -20,9 +20,9 @@ const Navbar = () => {
         <div className={"navbar-c__option"} onClick={toggleAddModalState}>
           <span >Add New Question</span>
         </div>
-        <div className={"navbar-c__option"} onClick={logout}>
+        {/* <div className={"navbar-c__option"} onClick={logout}>
           <span  >Logout</span>
-        </div>
+        </div> */}
       </div>
       {addModalState && <AddModal toggleAddModalState={toggleAddModalState}/>}
     </>
