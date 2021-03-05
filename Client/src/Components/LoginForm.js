@@ -20,7 +20,7 @@ const LoginForm = (props)=>{
         const json = await response.json()
         if (json["token"]){
           console.log("JSON", json)
-          document.cookie = json["token"];
+          document.cookie = 'quiz' +'='+ json["token"] +'; Path=/;';
           document.location.reload();
         } else {
           console.log("Error in login: 409")
@@ -72,7 +72,7 @@ const LoginForm = (props)=>{
         const json = await response.json()
         if (json["token"]){
           console.log("JSON", json)
-          document.cookie = json["token"];
+          document.cookie = 'quiz' +'='+ json["token"] +'; Path=/;';
           document.location.reload();
         } else {
           console.log("Error in login: 409")

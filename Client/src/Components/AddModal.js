@@ -91,8 +91,8 @@ const AddModal = (props) => {
           <textarea 
           ref={question}
           placeholder={"Add your quizz question here"}
-          minLength={5} 
-          maxLength={250}
+          minlength={5} 
+          maxlength={250}
           ></textarea>
         </label>
         <label>
@@ -100,8 +100,8 @@ const AddModal = (props) => {
           <textarea 
           ref={correct}
           placeholder={"Enter the correct answer to the quizz question here"}
-          minLength={1} 
-          maxLength={250}
+          minlength={1} 
+          maxlength={250}
           ></textarea>
         </label>
         <label>
@@ -109,7 +109,7 @@ const AddModal = (props) => {
           <textarea 
           ref={false1}
           placeholder={"Enter an incorrect answer to the quizz question here"}
-          minLength={1} 
+          minlength={1} 
           maxlength={250}
           ></textarea>
           </label>
@@ -118,8 +118,8 @@ const AddModal = (props) => {
           <textarea 
           ref={false2}
           placeholder={"Enter an incorrect answer to the quizz question here"}
-          minLength={1} 
-          maxLength={250}
+          minlength={1} 
+          maxlength={250}
           ></textarea>
           </label>
         <label>
@@ -128,7 +128,7 @@ const AddModal = (props) => {
           ref={false3}
           placeholder={"Enter an incorrect answer to the quizz question here"}
           minlength={1} 
-          maxLength={250}
+          maxlength={250}
           ></textarea>
         </label>
         <button onClick={submit}>Submit</button>
