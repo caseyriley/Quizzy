@@ -40,16 +40,15 @@ body {
   min-height: 90px;
   width: 100%;
 }
+#main__title-login {
+  color: plum;
+  font-family: 'Ultra', serif; 
+  text-shadow: 0px 3px 5px rgb(0, 0, 0, .8), 2px 3px 0px cyan; 
+}
 #main__title {
   color: plum;
-  /* font-family: 'Maven Pro', sans-serif;
-  font-family: 'Oxygen', sans-serif;
-  font-family: 'Russo One', sans-serif; */
   font-family: 'Ultra', serif; 
-  text-shadow: 0px 3px 6px black, 2px 3px 0px cyan;
-  margin: 30px 0px 30px 30px;
-  
-
+  text-shadow: 0px 3px 6px black, 2px 3px 0px cyan; 
 }
 .q-instructions {
   min-width: 400px;

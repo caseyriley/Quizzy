@@ -10,6 +10,7 @@ const LoginPage = () => {
 
   return (
     <div className={"login-main fade-in"} >
+      <h1 id={'main__title-login'}>CODE SAUCE</h1>
       <div className={"login-form-c"} >
         <div className={"login-signup-button"} >
           <div className={"login-button"} onClick={()=>{setLogSignState(true)}} ><span>Login</span></div>

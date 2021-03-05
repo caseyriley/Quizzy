@@ -9,6 +9,9 @@
   align-items: center;
   justify-content: center;
   background-color: rgb(216, 196, 216);
+  background-image: url('../images/sauce.jpg');
+  background-position: center;
+  background-size: cover;
 }
 .login-form-c{
   width: 300px;
