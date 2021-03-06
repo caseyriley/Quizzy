@@ -143,13 +143,13 @@ const App = () => {
         <div id={"undernav"} className={"undernav"}></div>
         <h1 id={'main__title'}>CODE SAUCE</h1>
         {errorInstState === false &&
-          <div className={"q-instructions"}>
+        <div className={"q-instructions"}>
           <p>Answer 10 multiple choice questions and click the submit button to see your score.</p>
           <p>The correct answers will be displayed only after submitting your answers.</p>
           <p>The questions provided are random so each time you play the questions will be different.</p>
         </div>}
         {errorInstState === true &&
-          <div className={"q-instructions q-instructions-err"}>
+        <div className={"q-instructions q-instructions-err"}>
           <p>Answer any unanswered questions before submitting your answers</p>
         </div>}
 

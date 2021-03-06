@@ -66,7 +66,6 @@ body {
 .q-instructions p {
   color: rgb(241, 241, 241);
   color: rgb(69, 126, 201);
-  
   font-family: 'Oxygen', sans-serif;
   margin: 0px 15px 15px 15px;
   text-align: center;
@@ -111,9 +110,7 @@ body {
   text-shadow: 0px 2px 2px rgb(0, 0, 0, .8);
   font-family: 'Russo One', sans-serif; 
   color: rgb(144, 232, 238);
-  margin: 0px 0px 0px 30px;
-  
-  
+  margin: 0px 5px 0px 30px;
 }
 
 #main__submit {
