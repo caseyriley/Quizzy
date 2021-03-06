@@ -49,7 +49,7 @@ const SignupForm = (props)=>{
             const json = await response.json()
             if (json["token"]){
               console.log("JSON",json)
-              document.cookie = json["token"];
+              document.cookie = 'quiz' +'='+ json["token"] +'; Path=/;';
               document.location.reload();
             } else {
               console.log("Error in signup: 409")
