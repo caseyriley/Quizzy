@@ -16,7 +16,7 @@ const ScoreModal = (props) => {
               return(
                 <div key={i} className={"modal-answer"}>
                   <p className={"modal-answer__p1"}>{props.quizzState[i]["qna"].question}</p>
-                  <p className={"modal-answer__p2"}>{props.quizzState[i]["qna"].correct}</p>
+                  <p className={`modal-answer__p2 ${props.pointsState[`q${i}`] === 0 && 'score-modal--error' }`}>{props.quizzState[i]["qna"].correct}</p>
                 </div>
               )
             })

@@ -37,7 +37,6 @@ const App = () => {
           let prev = JSON.parse(el["qna"]);
           json[i]["qna"] = prev;
         });
-        console.log("JJJJJJJJJJJJJ", json[0]["qna"])
         return json;
       })
       .then(json => {
@@ -112,6 +111,7 @@ const App = () => {
       for (const answer in pointsState){
         count += pointsState[answer];
       }
+      console.log("pointState====>", pointsState)
 
       setTotallState(count);
       setScoreModalState(true);
@@ -167,7 +167,8 @@ const App = () => {
 
       </div>
 
-      <ScoreModal scoreModalState={scoreModalState} reload={reload} totallState={totallState} quizzState={quizzState} />
+      <ScoreModal scoreModalState={scoreModalState} reload={reload} totallState={totallState} 
+      quizzState={quizzState}  pointsState={pointsState}/>
     </>
 
   );
