@@ -101,7 +101,7 @@ const LoginForm = (props)=>{
         <input
         ref={password}
         required
-        placeholder={"superSecret*"}
+        placeholder={"superSecret3"}
         minLength={6} 
         maxLength={150}
         />

@@ -15,12 +15,10 @@
 }
 .login-form-c{
   width: 300px;
-  border: 1px solid gray;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(255, 255, 185);
   border-radius: 20px;
   overflow:hidden;
   -webkit-box-shadow: 0px 10px 13px -7px rgb(0, 0, 0, .7), 5px 5px 15px 5px rgba(0,0,0,0); 
@@ -36,13 +34,14 @@
 .login-button{
   width: 50%;
   height: 30px;
-  background-color: rgb(99, 99, 99);
+  background-color: rgba(242, 209, 223, 0.91);
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .login-button span{
-  color: rgb(148, 255, 248);
+  color: rgb(171, 141, 228);
   font-family: 'Oxygen', sans-serif;
   margin: 0px 0px 0px 0px;
   text-align: center;
@@ -50,13 +49,14 @@
 .signup-button{
   width: 50%;
   height: 30px;
-  background-color: rgb(184, 184, 184);
+  background-color: rgba(178, 216, 230, 0.91);
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .signup-button span{
-  color: rgb(50, 140, 237);
+  color: rgb(171, 141, 228);
   font-family: 'Oxygen', sans-serif;
   margin: 0px 0px 0px 0px;
   text-align: center;
@@ -68,8 +68,7 @@
   justify-content: center;
   align-items: center;
   background-size: cover;
-  background-color: rgb(184, 184, 184);
-  border: 8px solid rgb(184, 184, 184);
+  background-color: rgba(178, 216, 230, 0.91);
 }
 .login-form{
   width: 100%;
@@ -78,17 +77,14 @@
   justify-content: center;
   align-items: center;
   background-size: cover;
-  background-color: rgb(99, 99, 99);
-  border: 8px solid rgb(99, 99, 99);
+  background-color: rgba(242, 209, 223, 0.91);
 }
 .login-form label{
   width: 100%;
-  color: rgb(148, 255, 248);
-  font-family: 'Ultra', serif;  
+  color: rgb(171, 141, 228);
   font-family: 'Oxygen', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  margin: 0px 0px 0px 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -108,58 +104,58 @@
   border: 2px solid rgb(201, 108, 232);
 }
 .log-sign-login-button{
-  width: 60%;
+  color: rgb(171, 141, 228);
   height: 30px;
+  width: 60%;
+  border: 1px solid rgb(255, 239, 242);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 999px;
-  box-shadow: 0px 3px 6px rgb(0, 0, 0, .3),
-  inset 0px -3px 6px rgb(0, 0, 0, .2);
+  box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, .3);
+  transition: all .4s;
+  background-color :rgb(255, 255, 255, .2);
   margin: 20px 0px 20px 0px;
-  transition: all .3s;
-  color: rgb(215, 144, 238);
-  background-color: rgb(201, 108, 232);
-  color: rgb(72, 203, 142);
+  cursor: pointer;
 }
 .log-sign-login-button span{
-  font-family: 'Ultra', serif;  
-  text-shadow: 2px 2px 2px rgb(0, 0, 0, .5);
+  font-family: 'Oxygen', sans-serif;
   transition: all .3s;
 }
 .log-sign-login-button:hover{
-  background-color: rgb(250, 188, 73);
+  background-color: rgb(255, 255, 255);
   color: rgb(215, 144, 238);
 }
 
 .log-sign-demo-button{
-  width: 60%;
+  color: rgb(171, 141, 228);
   height: 30px;
+  width: 60%;
+  border: 1px solid rgb(255, 239, 242);
+  font-family: 'Oxygen', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 999px;
-  box-shadow: 0px 3px 6px rgb(0, 0, 0, .3),
-  inset 0px -3px 6px rgb(0, 0, 0, .2);
-  margin: 00px 0px 20px 0px;
-  transition: all .3s;
-  background-color: rgb(201, 108, 232);
-  color: rgb(72, 203, 142);
+  box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, .3);
+  transition: all .4s;
+  background-color :rgb(255, 255, 255, .2);
+  margin: 20px 0px 20px 0px;
+  cursor: pointer;
 }
 .log-sign-demo-button span{
-  font-family: 'Ultra', serif;  
-  text-shadow: 2px 2px 2px rgb(0, 0, 0, .5);
+  font-family: 'Oxygen', sans-serif;
   transition: all .3s;
 }
 .log-sign-demo-button:hover{
-  background-color: rgb(250, 188, 73);
+  background-color: rgb(255, 255, 255);
   color: rgb(215, 144, 238);
 }
 
 /* /////////////Signup/Form/////////////////// */
 .signup-form label{
   width: 100%;
-  color: rgb(50, 140, 237);
+  color: rgb(171, 141, 228);
   font-family: 'Oxygen', sans-serif;
   font-size: 15px;
   font-weight: 700;
