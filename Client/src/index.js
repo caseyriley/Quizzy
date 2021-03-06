@@ -17,10 +17,6 @@ if (cookies){
   loggedIn = true;
 }
 
-// let loggedIn = true;
-
-
-
 ReactDOM.render(
   <React.StrictMode>
     {loggedIn ? <App /> : <LoginPage/>}

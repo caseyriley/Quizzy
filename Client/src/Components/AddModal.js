@@ -82,8 +82,7 @@ const AddModal = (props) => {
       <form className={"add-modal-form"}>
         <div id={"add-modal-instructions-c"} className={"add-modal-instructions-c"}>
           <p id={"add-modal-instructions"}>
-            Use the form below to leave a multiple choice coding question for the 
-            legacy of Code Sauce <span role="img" aria-label="smiling-cat">😸</span>
+            Use the form below to create a multiple choice coding question <span role="img" aria-label="smiling-cat">😸</span>
           </p>
         </div>
         <label>
