@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/app.css';
 import './styles/navbar.css';
 import './styles/addModal.css';
 import './styles/loginPage.css';
