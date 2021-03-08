@@ -19,8 +19,19 @@
   align-items: center;
   justify-content: center;
   background-color: thistle;
-  overflow-y: scroll;
+  overflow: hidden;
+
   border-radius: 20px;
+}
+.add-modal-c-scroll {
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .add-modal-close {
   width: 30px;
@@ -84,7 +95,8 @@
   justify-content: center;
   min-height: 1050px;
   width: 80%;
-  margin: 500px 0px 50px 0px;
+  margin: 550px 0px 50px 0px;
+  border-radius: 20px;
 }
 .add-modal-form label {
   text-align: center;

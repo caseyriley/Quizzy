@@ -73,64 +73,67 @@ const AddModal = (props) => {
     <>
     <div className={"add-modal-background"}></div>
     <div className={"add-modal-c"}>
-      <div id={"add-modal-close"} className={"add-modal-close"} onClick={props.toggleAddModalState}>
-        <div></div>
-        <div></div>
-      </div>
-
-      <form className={"add-modal-form"}>
-        <div id={"add-modal-instructions-c"} className={"add-modal-instructions-c"}>
-          <p id={"add-modal-instructions"}>
-            Use the form below to create a multiple choice coding question <span role="img" aria-label="smiling-cat">😸</span>
-          </p>
+      <div className={"add-modal-c-scroll"}>
+        <div id={"add-modal-close"} className={"add-modal-close"} onClick={props.toggleAddModalState}>
+          <div></div>
+          <div></div>
         </div>
-        <label>
-          Question <br/>
-          <textarea 
-          ref={question}
-          placeholder={"Add your quizz question here"}
-          minlength={5} 
-          maxlength={250}
-          ></textarea>
-        </label>
-        <label>
-          Correct Answer <br/>
-          <textarea 
-          ref={correct}
-          placeholder={"Enter the correct answer to the quizz question here"}
-          minlength={1} 
-          maxlength={250}
-          ></textarea>
-        </label>
-        <label>
-          Wrong Answer 1<br/>
-          <textarea 
-          ref={false1}
-          placeholder={"Enter an incorrect answer to the quizz question here"}
-          minlength={1} 
-          maxlength={250}
-          ></textarea>
+
+        <form className={"add-modal-form"}>
+          <div id={"add-modal-instructions-c"} className={"add-modal-instructions-c"}>
+            <p id={"add-modal-instructions"}>
+              Use the form below to create a multiple choice coding question <span role="img" aria-label="smiling-cat">😸</span>
+            </p>
+          </div>
+          <label>
+            Question <br/>
+            <textarea 
+            ref={question}
+            placeholder={"Add your quizz question here"}
+            minlength={5} 
+            maxlength={250}
+            ></textarea>
           </label>
-        <label>
-          Wrong Answer 2<br/>
-          <textarea 
-          ref={false2}
-          placeholder={"Enter an incorrect answer to the quizz question here"}
-          minlength={1} 
-          maxlength={250}
-          ></textarea>
+          <label>
+            Correct Answer <br/>
+            <textarea 
+            ref={correct}
+            placeholder={"Enter the correct answer to the quizz question here"}
+            minlength={1} 
+            maxlength={250}
+            ></textarea>
           </label>
-        <label>
-          Wrong Answer 3<br/>
-          <textarea 
-          ref={false3}
-          placeholder={"Enter an incorrect answer to the quizz question here"}
-          minlength={1} 
-          maxlength={250}
-          ></textarea>
-        </label>
-        <button onClick={submit}>Submit</button>
-     </form>
+          <label>
+            Wrong Answer 1<br/>
+            <textarea 
+            ref={false1}
+            placeholder={"Enter an incorrect answer to the quizz question here"}
+            minlength={1} 
+            maxlength={250}
+            ></textarea>
+            </label>
+          <label>
+            Wrong Answer 2<br/>
+            <textarea 
+            ref={false2}
+            placeholder={"Enter an incorrect answer to the quizz question here"}
+            minlength={1} 
+            maxlength={250}
+            ></textarea>
+            </label>
+          <label>
+            Wrong Answer 3<br/>
+            <textarea 
+            ref={false3}
+            placeholder={"Enter an incorrect answer to the quizz question here"}
+            minlength={1} 
+            maxlength={250}
+            ></textarea>
+          </label>
+          <button onClick={submit}>Submit</button>
+        </form>
+      </div>
+      
     </div>
     </>
   )

@@ -1,0 +1,31 @@
+@media screen and (max-width: 350px) {
+  /* ///////////////Add-Modal//////////////// */
+  .add-modal-c {
+    width: 100%;
+    left: 0px;
+  }
+  #add-modal-instructions-c {
+    min-width: 280px;
+    max-width: 280px;
+    border-radius: 10px;
+  }
+  .add-modal-instructions-c {
+    min-width: 280px;
+    max-width: 280px;
+    border-radius: 10px;
+  }
+  #add-modal-instructions-c p{
+    margin: 10px 0px 10px 0px;
+    font-size: 15px;
+    min-width: 280px;
+    max-width: 280px;
+ 
+  }
+  #add-modal-instructions {
+    min-width: 280px;
+    max-width: 280px;
+  }
+  .add-modal-form label {
+    width: 100%;
+  }
+}
