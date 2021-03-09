@@ -40,12 +40,6 @@ body {
   min-height: 90px;
   width: 100%;
 }
-#main__title-login {
-  color: plum;
-  font-family: 'Ultra', serif; 
-  text-shadow: 0px 3px 5px rgb(0, 0, 0, .8), 
-  2px 3px 0px cyan; 
-}
 #main__title {
   color: plum;
   font-family: 'Ultra', serif; 

@@ -5,12 +5,16 @@ import './styles/navbar.css';
 import './styles/addModal.css';
 import './styles/scoreModal.css';
 import './styles/loginPage.css';
-import './styles/mScreen750.css';
+
+import './styles/mScreenW750.css';
 import './styles/mScreenW650.css';
 import './styles/mScreenW500.css';
 import './styles/mScreenW400.css';
 import './styles/mScreenW350.css';
 import './styles/mScreenW300.css';
+
+import './styles/mScreenH750.css';
+import './styles/mScreenH650.css';
 
 
 

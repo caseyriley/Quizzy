@@ -21,4 +21,8 @@
   .add-modal-form label {
     font-size: 21px;
   }
+  /* ///////////Login//////////////// */
+  .login-form-c{
+    width: 300px;
+  }
 }

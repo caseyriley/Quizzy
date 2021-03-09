@@ -13,8 +13,32 @@
   background-position: center;
   background-size: cover;
 }
-.login-form-c{
+#main__title-login {
+  position: fixed;
+  top: 50px;
+  color: plum;
+  font-family: 'Ultra', serif; 
+  font-size: 8vw;
+  text-shadow: 0px 3px 5px rgb(0, 0, 0, .8), 
+  2px 3px 0px cyan; 
+}
+/* .login-form-c{
   width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow:hidden;
+  -webkit-box-shadow: 0px 10px 13px -7px rgb(0, 0, 0, .7), 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px rgb(0, 0, 0, .7), 
+  5px 5px 15px 5px rgba(0,0,0,0);
+  border: 1px solid white;
+} */
+.login-form-c{
+  position: fixed;
+  top: 300px;
+  width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,6 +51,8 @@
   border: 1px solid white;
 }
 .login-signup-button{
+  font-size: 22px;
+
   width: 100%;
   display: flex;
   align-items: center;
@@ -35,6 +61,7 @@
 .login-button{
   width: 50%;
   height: 30px;
+  height: 50px;
   background-color: rgba(242, 209, 223, 0.91);
   display: flex;
   align-items: center;
@@ -50,6 +77,7 @@
 .signup-button{
   width: 50%;
   height: 30px;
+  height: 50px;
   background-color: rgba(178, 216, 230, 0.91);
   display: flex;
   align-items: center;
@@ -84,7 +112,7 @@
   width: 100%;
   color: rgb(171, 141, 228);
   font-family: 'Oxygen', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
   display: flex;
@@ -95,7 +123,7 @@
 }
 .login-form label input{
   width: 80%;
-  height: 30px;
+  height: 40px;
   outline: none;
   border: 2px solid rgb(161, 43, 211);
   border-radius: 8px;
@@ -106,7 +134,7 @@
 }
 .log-sign-login-button{
   color: rgb(171, 141, 228);
-  height: 30px;
+  height: 40px;
   width: 60%;
   border: 1px solid rgb(255, 239, 242);
   display: flex;
@@ -121,6 +149,7 @@
 }
 .log-sign-login-button span{
   font-family: 'Oxygen', sans-serif;
+  font-size: 20px;
   transition: all .3s;
 }
 .log-sign-login-button:hover{
@@ -130,7 +159,7 @@
 
 .log-sign-demo-button{
   color: rgb(171, 141, 228);
-  height: 30px;
+  height: 40px;
   width: 60%;
   border: 1px solid rgb(255, 239, 242);
   font-family: 'Oxygen', sans-serif;
@@ -141,11 +170,12 @@
   box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, .3);
   transition: all .4s;
   background-color :rgb(255, 255, 255, .2);
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 30px 0px;
   cursor: pointer;
 }
 .log-sign-demo-button span{
   font-family: 'Oxygen', sans-serif;
+  font-size: 20px;
   transition: all .3s;
 }
 .log-sign-demo-button:hover{
