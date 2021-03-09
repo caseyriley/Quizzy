@@ -21,6 +21,9 @@
     font-size: 22px;
   }
     /* //////////Login///////////// */
+    #main__title-login {
+      font-size: 10vw;
+    }
     .login-form-c{
       width: 400px;
     }

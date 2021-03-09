@@ -6,4 +6,9 @@
   .login-form-c{
     width: 500px;
   }
+  #main__title-login {
+    position: fixed;
+    top: 50px;
+    font-size: 10vw;
+  }
 }

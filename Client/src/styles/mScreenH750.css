@@ -1,13 +1,9 @@
 @media screen and (max-height: 750px) {
   /* ////////////Login////////////// */
   #main__title-login {
-    position: fixed;
-    top: 0px;
-    color: plum;
-    font-family: 'Ultra', serif; 
-    font-size: 8vw;
-    text-shadow: 0px 3px 5px rgb(0, 0, 0, .8), 
-    2px 3px 0px cyan; 
+    /* position: fixed;
+    top: 20px; */
+    /* font-size: 8vw; */
   }
   .login-form-c{
     position: fixed;
