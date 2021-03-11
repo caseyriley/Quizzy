@@ -23,6 +23,16 @@ import App from './App';
 import LoginPage from './Components/LoginPage';
 
 
+// const autoprefixer = require('autoprefixer')
+// const postcss = require('postcss')
+
+// postcss([autoprefixer]).process(css).then(result => {
+//   result.warnings().forEach(warn => {
+//     console.warn(warn.toString())
+//   })
+//   console.loc(result.css)
+// })
+
 
 let loggedIn = false;
 

@@ -22,19 +22,6 @@
   text-shadow: 0px 3px 5px rgb(0, 0, 0, .8), 
   2px 3px 0px cyan; 
 }
-/* .login-form-c{
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  overflow:hidden;
-  -webkit-box-shadow: 0px 10px 13px -7px rgb(0, 0, 0, .7), 5px 5px 15px 5px rgba(0,0,0,0); 
-  box-shadow: 0px 10px 13px -7px rgb(0, 0, 0, .7), 
-  5px 5px 15px 5px rgba(0,0,0,0);
-  border: 1px solid white;
-} */
 .login-form-c{
   position: fixed;
   top: 300px;
@@ -52,7 +39,6 @@
 }
 .login-signup-button{
   font-size: 22px;
-
   width: 100%;
   display: flex;
   align-items: center;
@@ -156,7 +142,6 @@
   background-color: rgb(255, 255, 255);
   color: rgb(215, 144, 238);
 }
-
 .log-sign-demo-button{
   color: rgb(171, 141, 228);
   height: 40px;
@@ -182,7 +167,6 @@
   background-color: rgb(255, 255, 255);
   color: rgb(215, 144, 238);
 }
-
 /* /////////////Signup/Form/////////////////// */
 .signup-form label{
   width: 100%;
