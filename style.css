@@ -209,6 +209,9 @@ body {
 }
 
 
+a {
+  width: calc(50% - 2em)
+}
 
 a {
   background: linear-gradient(to top, black, white);
