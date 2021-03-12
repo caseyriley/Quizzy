@@ -10,13 +10,6 @@ module.exports = function (grunt) {
               }]
             }
           },
-        // autoprefixer: {
-        //     dist: {
-        //         files: {
-        //             'build/style.css': 'Client/src/styles/*.css'
-        //         }
-        //     }
-        // },
         watch: {
             styles: {
                 files: ['Client/src/styles/*.css'],

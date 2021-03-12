@@ -13,7 +13,7 @@
   -ms-flex-pack: start;
       justify-content: flex-start;
   background-color: rgb(216, 196, 216);
-  background-image: url('../images/sauce.jpg');
+  background-image: url('../../images/sauce.jpg');
   background-position: center;
   background-size: cover;
 }
