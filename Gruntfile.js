@@ -1,15 +1,25 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         autoprefixer: {
-            dist: {
-                files: {
-                    'build/style.css': 'style.css'
-                }
+            multiple_files: {
+              files: [{
+                expand: true,
+                flatten: true,
+                src: 'Client/src/styles/*.css',
+                dest: 'dest/css/'
+              }]
             }
-        },
+          },
+        // autoprefixer: {
+        //     dist: {
+        //         files: {
+        //             'build/style.css': 'Client/src/styles/*.css'
+        //         }
+        //     }
+        // },
         watch: {
             styles: {
-                files: ['style.css'],
+                files: ['Client/src/styles/*.css'],
                 tasks: ['autoprefixer']
             }
         }

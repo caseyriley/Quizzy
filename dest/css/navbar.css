@@ -1,9 +1,12 @@
 .navbar-c {
   height: 90px;
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center;
   background-color: rgb(220, 159, 220);
   box-shadow: 0px 4px 10px 0px rgba(56, 4, 82, 0.4);
   position: fixed;
@@ -14,9 +17,12 @@
  
 .navbar-c__option{
   height: 30px;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   color: powderblue;
   border: 2px solid powderblue;
   border-radius: 20px;

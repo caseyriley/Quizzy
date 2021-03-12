@@ -1,0 +1,14 @@
+@media screen and (max-width: 650px) {
+  .add-modal-form {
+    margin: 600px 0px 50px 0px;
+  }
+  /* //////////Login///////////// */
+  .login-form-c{
+    width: 500px;
+  }
+  #main__title-login {
+    position: fixed;
+    top: 50px;
+    font-size: 10vw;
+  }
+}
