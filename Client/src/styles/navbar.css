@@ -11,8 +11,8 @@
   left: 0px;
   z-index: 1;
 }
- 
-.navbar-c__option{
+
+.navbar-c__option {
   height: 30px;
   display: flex;
   justify-content: center;
@@ -22,11 +22,9 @@
   border-radius: 20px;
   padding: 0px 10px 0px 10px;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
   background-color: rgb(189, 135, 189);
   margin: 0px 20px 0px 0px;
-  /* position: absolute; */
-  /* right: 20px; */
 }
 .navbar-c__option:hover {
   color: white;

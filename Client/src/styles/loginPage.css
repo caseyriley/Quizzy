@@ -1,4 +1,4 @@
-.login-main{
+.login-main {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: flex-start;
   background-color: rgb(216, 196, 216);
-  background-image: url('../images/sauce.jpg');
+  background-image: url("../images/sauce.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -17,12 +17,11 @@
   position: fixed;
   top: -20px;
   color: plum;
-  font-family: 'Ultra', serif; 
+  font-family: "Ultra", serif;
   font-size: 8vw;
-  text-shadow: 0px 3px 5px rgb(0, 0, 0, .8), 
-  2px 3px 0px cyan; 
+  text-shadow: 0px 3px 5px rgb(0, 0, 0, 0.8), 2px 3px 0px cyan;
 }
-.login-form-c{
+.login-form-c {
   position: fixed;
   top: 300px;
   width: 600px;
@@ -31,20 +30,21 @@
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  overflow:hidden;
-  -webkit-box-shadow: 0px 10px 13px -7px rgb(0, 0, 0, .7), 5px 5px 15px 5px rgba(0,0,0,0); 
-  box-shadow: 0px 10px 13px -7px rgb(0, 0, 0, .7), 
-  5px 5px 15px 5px rgba(0,0,0,0);
+  overflow: hidden;
+  -webkit-box-shadow: 0px 10px 13px -7px rgb(0, 0, 0, 0.7),
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px rgb(0, 0, 0, 0.7),
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
   border: 1px solid white;
 }
-.login-signup-button{
+.login-signup-button {
   font-size: 22px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.login-button{
+.login-button {
   width: 50%;
   height: 30px;
   height: 50px;
@@ -54,13 +54,13 @@
   justify-content: center;
   cursor: pointer;
 }
-.login-button span{
+.login-button span {
   color: rgb(171, 141, 228);
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   margin: 0px 0px 0px 0px;
   text-align: center;
 }
-.signup-button{
+.signup-button {
   width: 50%;
   height: 30px;
   height: 50px;
@@ -70,13 +70,13 @@
   justify-content: center;
   cursor: pointer;
 }
-.signup-button span{
+.signup-button span {
   color: rgb(171, 141, 228);
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   margin: 0px 0px 0px 0px;
   text-align: center;
 }
-.signup-form{
+.signup-form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -85,7 +85,7 @@
   background-size: cover;
   background-color: rgba(178, 216, 230, 0.91);
 }
-.login-form{
+.login-form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -94,10 +94,10 @@
   background-size: cover;
   background-color: rgba(242, 209, 223, 0.91);
 }
-.login-form label{
+.login-form label {
   width: 100%;
   color: rgb(171, 141, 228);
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   font-size: 20px;
   font-weight: 700;
   text-align: center;
@@ -107,7 +107,7 @@
   align-items: center;
   margin: 20px 0px 0px 0px;
 }
-.login-form label input{
+.login-form label input {
   width: 80%;
   height: 40px;
   outline: none;
@@ -115,10 +115,10 @@
   border-radius: 8px;
   margin: 2px;
 }
-.login-form label input:invalid{
+.login-form label input:invalid {
   border: 2px solid rgb(201, 108, 232);
 }
-.log-sign-login-button{
+.log-sign-login-button {
   color: rgb(171, 141, 228);
   height: 40px;
   width: 60%;
@@ -127,51 +127,51 @@
   justify-content: center;
   align-items: center;
   border-radius: 999px;
-  box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, .3);
-  transition: all .4s;
-  background-color :rgb(255, 255, 255, .2);
+  box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, 0.3);
+  transition: all 0.4s;
+  background-color: rgb(255, 255, 255, 0.2);
   margin: 20px 0px 20px 0px;
   cursor: pointer;
 }
-.log-sign-login-button span{
-  font-family: 'Oxygen', sans-serif;
+.log-sign-login-button span {
+  font-family: "Oxygen", sans-serif;
   font-size: 20px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-.log-sign-login-button:hover{
+.log-sign-login-button:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(215, 144, 238);
 }
-.log-sign-demo-button{
+.log-sign-demo-button {
   color: rgb(171, 141, 228);
   height: 40px;
   width: 60%;
   border: 1px solid rgb(255, 239, 242);
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 999px;
-  box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, .3);
-  transition: all .4s;
-  background-color :rgb(255, 255, 255, .2);
+  box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, 0.3);
+  transition: all 0.4s;
+  background-color: rgb(255, 255, 255, 0.2);
   margin: 0px 0px 30px 0px;
   cursor: pointer;
 }
-.log-sign-demo-button span{
-  font-family: 'Oxygen', sans-serif;
+.log-sign-demo-button span {
+  font-family: "Oxygen", sans-serif;
   font-size: 20px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-.log-sign-demo-button:hover{
+.log-sign-demo-button:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(215, 144, 238);
 }
 /* /////////////Signup/Form/////////////////// */
-.signup-form label{
+.signup-form label {
   width: 100%;
   color: rgb(171, 141, 228);
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   font-size: 15px;
   font-weight: 700;
   margin: 0px 0px 0px 0px;
@@ -182,7 +182,7 @@
   align-items: center;
   margin: 20px 0px 0px 0px;
 }
-.signup-form label input{
+.signup-form label input {
   width: 80%;
   height: 30px;
   outline: none;
@@ -190,12 +190,10 @@
   border-radius: 8px;
   margin: 2px;
 }
-.signup-form label input:invalid{
+.signup-form label input:invalid {
   border: 2px solid rgb(201, 108, 232);
 }
-
 
 .error {
   border: 2px dashed red !important;
 }
-

@@ -48,19 +48,19 @@
   background-color: rgb(202, 228, 247);
   border: 1px solid rgb(206, 119, 206);
 }
-.add-modal-close :nth-child(1){
+.add-modal-close :nth-child(1) {
   transform: rotate(45deg);
   border: 1px solid grey;
   width: 15px;
   position: absolute;
 }
-.add-modal-close :nth-child(2){
+.add-modal-close :nth-child(2) {
   transform: rotate(-45deg);
   border: 1px solid grey;
   width: 15px;
   position: absolute;
 }
-.add-modal-instructions-c{
+.add-modal-instructions-c {
   min-width: 400px;
   max-width: 80%;
   height: auto;
@@ -74,13 +74,13 @@
   top: 50px;
   margin: 60px 0px 60px 0px;
 }
-.add-modal-instructions-c p{
+.add-modal-instructions-c p {
   color: rgb(69, 126, 201);
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   margin: 15px 15px 15px 15px;
   text-align: center;
 }
-.instructions-err{
+.instructions-err {
   color: red !important;
   border: 1px solid red;
   background-color: white;
@@ -97,12 +97,11 @@
 }
 .add-modal-form label {
   text-align: center;
-  font-family: 'Ultra', serif; 
+  font-family: "Ultra", serif;
   color: plum;
   text-shadow: 0px 3px 6px black, 2px 3px 0px cyan;
   font-size: 25px;
   width: 80%;
-
 }
 textarea {
   width: 80%;
@@ -114,29 +113,28 @@ textarea {
   outline: none;
   border-radius: 4px;
 }
-.add-modal-form label  textarea:invalid {
+.add-modal-form label textarea:invalid {
   border: 2px dashed red;
 }
-  
-.add-modal-form label  textarea:valid {
+
+.add-modal-form label textarea:valid {
   border: 2px solid rgb(1, 205, 18);
 }
 .add-modal-form button {
   width: 150px;
   height: 50px;
-  font-family: 'Ultra', serif; 
+  font-family: "Ultra", serif;
   color: plum;
   text-shadow: 0px 1px 3px black;
   font-size: 25px;
   background-color: powderblue;
   border: none;
   border-radius: 999px;
-  box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, .3),
-  inset 0px -3px 6px 0px rgb(0, 0, 0, .3);
+  box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, 0.3),
+    inset 0px -3px 6px 0px rgb(0, 0, 0, 0.3);
   outline: none;
   margin: 15px 0px 0px 0px;
-  transition: background-color .3s;
-
+  transition: background-color 0.3s;
 }
 .add-modal-form button:hover {
   background-color: purple;
