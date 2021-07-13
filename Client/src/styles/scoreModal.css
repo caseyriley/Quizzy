@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 0, 0, .5);
+  background-color: rgb(0, 0, 0, 0.5);
   overflow-y: scroll;
 }
 .main__score-modal-close {
@@ -15,7 +15,7 @@
   width: 0px;
   height: 0px;
 }
-#main__score-modal-open__point-c{
+#main__score-modal-open__point-c {
   width: 70%;
   height: auto;
   border-radius: 20px;
@@ -25,29 +25,26 @@
   align-items: center;
   flex-direction: column;
   margin: 850px 0px 30px 0px;
-  
-
 }
 #main__score-modal-open__point-c__title {
   color: rgb(141, 230, 236);
   font-size: 60px;
   text-align: center;
-  font-family: 'Ultra', serif;
+  font-family: "Ultra", serif;
   margin: 30px 30px 10px 30px;
 }
 #main__score-modal-open__point-c__points {
   color: rgb(163, 236, 163);
   font-size: 60px;
-  font-family: 'Ultra', serif;
+  font-family: "Ultra", serif;
   margin: 0px 30px 30px 30px;
 }
-.main__score-modal-open__answers{
+.main__score-modal-open__answers {
   height: auto;
   width: 70%;
   background-color: whitesmoke;
   border-radius: 20px;
   margin: 0px 0px 30px 0px;
-
 }
 .modal-answer {
   display: flex;
@@ -58,25 +55,24 @@
 }
 .modal-answer__p1 {
   margin: 20px 20px 0px 20px;
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   font-size: 12px;
   color: grey;
 }
 .modal-answer__p2 {
   margin: 10px 20px 0px 20px;
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   font-size: 15px;
   color: rgb(130, 153, 153);
-  
 }
-#answers-title{
+#answers-title {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#answers-title__h2{
-  font-family: 'Russo One', sans-serif;
+#answers-title__h2 {
+  font-family: "Russo One", sans-serif;
   text-align: center;
   color: rgb(97, 97, 228);
   margin: 0px 5px 0px 5px;
