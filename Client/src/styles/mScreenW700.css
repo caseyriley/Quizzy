@@ -1,9 +1,9 @@
 @media screen and (max-width: 700px){
     /* ////////////Login////////////// */
-  #main__title-login {
+    .main__title-login {
     font-size: 10vw !important; 
   }
-  /* #main__title-login {
+  /* .main__title-login {
     position: fixed;
     top: 50px;
     color: plum;
