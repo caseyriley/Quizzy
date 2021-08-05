@@ -94,7 +94,7 @@ const SignupForm = (props) => {
           ref={password}
           className={`${errorState.password === false ? "error" : ""}`}
           required
-          placeholder={"superSecret3"}
+          placeholder={"superSecret3^"}
           minLength={6}
           maxLength={150}
         />
@@ -105,7 +105,7 @@ const SignupForm = (props) => {
           ref={name}
           className={`${errorState.name === false ? "error" : ""}`}
           required
-          placeholder={"Casey"}
+          placeholder={"your name"}
           minLength={3}
           maxLength={150}
         />
@@ -115,7 +115,7 @@ const SignupForm = (props) => {
         <input
           ref={language}
           required
-          placeholder={"javascript"}
+          placeholder={"..."}
           minLength={2}
           maxLength={150}
         />
