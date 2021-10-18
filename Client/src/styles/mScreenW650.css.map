@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EACjC,AAAA,eAAe,CAAC;IACd,MAAM,EAAE,kBAAkB;GAC3B;EACD,kCAAkC;EAClC,AAAA,aAAa,CAAA;IACX,KAAK,EAAE,KAAK;GACb;EACD,AAAA,kBAAkB,CAAC;IACjB;iBACa;IACb,SAAS,EAAE,IAAI;GAChB",
+    "sources": [
+        "mScreenW650.scss"
+    ],
+    "names": [],
+    "file": "mScreenW650.css"
+}

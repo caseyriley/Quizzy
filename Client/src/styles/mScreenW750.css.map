@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EACjC,AAAA,uCAAuC,CAAC;IACtC,SAAS,EAAE,IAAI;GAChB;EACD,AAAA,kBAAkB,CAAC;IACjB,SAAS,EAAE,IAAI;GAChB;EACD,qCAAqC;EACrC;;MAEI;EACJ;;;;;;;;MAQI",
+    "sources": [
+        "mScreenW750.scss"
+    ],
+    "names": [],
+    "file": "mScreenW750.css"
+}
