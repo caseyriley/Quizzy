@@ -7,8 +7,8 @@
   }
     /* ////////////Login////////////// */
     .main__title-login {
-      position: fixed;
-      top: 50px;
+      /* position: fixed;
+      top: 50px; */
       color: plum;
       font-family: 'Ultra', serif; 
       font-size: 8vw;

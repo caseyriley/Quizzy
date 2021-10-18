@@ -3,9 +3,13 @@ body {
   top: 0px;
   left: 0px;
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.fade-in {
-  animation: fade-in ease 0.6s;
+.fade-in{
+  animation: fade-in ease .6s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -28,21 +32,25 @@ body {
   position: fixed;
   top: 0px;
   left: 0px;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
   background-color: rgb(216, 196, 216);
   overflow-y: scroll;
 }
-.undernav {
+.undernav{
   min-height: 90px;
   width: 100%;
 }
 #main__title {
   color: plum;
-  font-family: "Ultra", serif;
-  text-shadow: 0px 3px 6px black, 2px 3px 0px cyan;
+  font-family: 'Ultra', serif; 
+  text-shadow: 0px 3px 6px black, 2px 3px 0px cyan; 
 }
 .q-instructions {
   min-width: 400px;
@@ -50,20 +58,24 @@ body {
   height: auto;
   background-color: rgb(172, 230, 235);
   border-radius: 20px;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column; 
   margin: 0px 0px 30px 0px;
 }
 .q-instructions p {
   color: rgb(241, 241, 241);
   color: rgb(69, 126, 201);
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Oxygen', sans-serif;
   margin: 0px 15px 15px 15px;
   text-align: center;
 }
-.q-instructions p:nth-child(1) {
+.q-instructions p:nth-child(1){
   margin: 15px 15px 15px 15px;
 }
 .q-instructions-err {
@@ -71,34 +83,44 @@ body {
   background-color: white;
 }
 .question {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-direction: column;
+      flex-direction: column;
   border: 1px solid lightgrey;
   height: auto;
   width: 80%;
   background-color: whitesmoke;
-  box-shadow: 2px 5px 6px 0px rgb(0, 0, 0, 0.3);
+  box-shadow: 2px 5px 6px 0px rgb(0, 0, 0, .3);
   border-radius: 10px;
   margin: 0px 0px 30px 0px;
   position: relative;
+
 }
-.question h2 {
-  font-family: "Oxygen", sans-serif;
+.question h2{
+  font-family: 'Oxygen', sans-serif;
   color: lightgreen;
   margin: 30px 0px 30px 30px;
   text-shadow: 0px 2px 3px black, 2px 3px 1px rgb(167, 192, 192);
+  
 }
 .question__answer {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
   margin: 0px 0px 30px 30px;
+  
 }
-.question__answer__text {
-  text-shadow: 0px 2px 2px rgb(0, 0, 0, 0.8);
-  font-family: "Russo One", sans-serif;
+.question__answer__text{
+  text-shadow: 0px 2px 2px rgb(0, 0, 0, .8);
+  font-family: 'Russo One', sans-serif; 
   color: rgb(144, 232, 238);
   margin: 0px 5px 0px 30px;
 }
@@ -109,25 +131,31 @@ body {
   width: 200px;
   margin: 0px 0px 60px 0px;
   border: 1px solid rgb(255, 239, 242);
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Oxygen', sans-serif;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   border-radius: 999px;
-  box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, 0.3);
-  transition: all 0.4s;
-  background-color: rgb(255, 255, 255, 0.2);
+  box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, .3);
+  transition: all .4s;
+  background-color :rgb(255, 255, 255, .2);
 }
 #main__submit:hover {
   background-color: rgb(255, 255, 255);
+  
 }
 
 /* ////////////Check-Boxes////////////// */
 
 /* Customize the label (the container) */
 .checkbox-label {
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
@@ -165,7 +193,7 @@ body {
 
 /* When the checkbox is checked, add a blue background */
 .checkbox-label input:checked ~ .checkmark {
-  background-color: #2196f3;
+  background-color: #2196F3;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -188,15 +216,16 @@ body {
   height: 10px;
   border: 1px solid white;
   border-width: 0px 3px 3px 0px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .radio-c {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
   padding: 5px;
 }
 

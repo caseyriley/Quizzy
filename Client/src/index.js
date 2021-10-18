@@ -6,7 +6,7 @@ import './dest/css/addModal.css';
 import './dest/css/scoreModal.css';
 import './dest/css/loginPage.css';
 
-import './styles/mScreenW700.css';
+// import './styles/mScreenW700.css';
 import './dest/css/mScreenW750.css';
 import './dest/css/mScreenW650.css';
 import './dest/css/mScreenW500.css';
